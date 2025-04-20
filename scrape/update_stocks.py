@@ -49,7 +49,7 @@ for symbol in symbols:
         print(f'[Error] Response code: {req.status_code}')
         print(f'Symbol: {symbol[0]}')
     
-    time.sleep(random.randint(1, 5))
+    time.sleep(random.randint(1, 4))
     end = time.time()
     total_time += (end-start)
     print(f'Time taken: {end - start}')
