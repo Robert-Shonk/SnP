@@ -176,7 +176,7 @@ def split_snp(snp):
         if 'nyse' not in row['exchange_url'] and 'nasdaq' not in row['exchange_url']:
             snp.loc[i, 'exchange_url'] = 'yahoo'
 
-    nyse = snp.query('exchange_url.str.contains("nyse")').reset_index()
+    nyse = snp.query('exchange_url.str.contains("nyse") | exchange_url.str.contains("yahoo")').reset_index()
     nasdaq = snp.query('exchange_url.str.contains("nasdaq")').reset_index()
 
     nyse_mid = math.ceil(len(nyse) / 2)
