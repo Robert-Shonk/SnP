@@ -56,13 +56,33 @@ def get_list():
 def get_nyse_month(driver, url, symbol):
     driver.get(url)
 
-    wait = WebDriverWait(driver, timeout=5)
+    wait = WebDriverWait(driver, timeout=10)
     wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'flex_tr')))
-    rows = driver.find_elements(By.CLASS_NAME, 'flex_tr')[:30]
+    rows = driver.find_elements(By.CLASS_NAME, 'flex_tr')[:29]
 
     temp = []
     data = {'symbol': [], 'date': [], 'open': [], 'high': [], 'low': [], 'close':[], 'volume': []}
 
+    # need to get today's info separately.
+    wait = WebDriverWait(driver, timeout=10)
+    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(9) > span:nth-child(2)')))
+
+    today_open = float(driver.find_element(By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(9) > span:nth-child(2)').text.replace(',', ''))
+    today_high = float(driver.find_element(By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(10) > span:nth-child(2)').text.replace(',', ''))
+    today_low = float(driver.find_element(By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(11) > span:nth-child(2)').text.replace(',', ''))
+    today_volume = int(driver.find_element(By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(4) > span:nth-child(2)').text.replace(',', ''))
+    today_close = float(driver.find_element(By.CLASS_NAME, 'd-dquote-x3').text.replace(',', ''))
+    today_date = driver.find_element(By.CSS_SELECTOR, '.d-dquote-time > span:nth-child(2)').text.split(' ')[0].replace('/', '-')
+
+    data['symbol'].append(symbol)
+    data['date'].append(today_date)
+    data['open'].append(today_open)
+    data['high'].append(today_high)
+    data['low'].append(today_low)
+    data['close'].append(today_close)
+    data['volume'].append(today_volume)
+
+    # get previous 29 days
     for row in rows:
         temp.append(row.text.replace(',', '').split('\n'))
 
@@ -75,35 +95,6 @@ def get_nyse_month(driver, url, symbol):
         data['close'].append(float(row[4]))
         data['volume'].append(int(row[5].replace(',', '')))
 
-    return data
-
-
-def get_nasdaq_month(driver, url,  symbol):
-    url = f'{url}/historical?page=1&rows_per_page=50&timeline=m6'
-    driver.get(url)
-
-    wait = WebDriverWait(driver, timeout=5)
-    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '.historical-table-container > nsdq-table:nth-child(1)')))
-
-    table = driver.find_element(By.XPATH, '/html/body/div[2]/div/main/div[2]/article/div/div[2]/div/div[2]/div[1]/div[1]/div[3]/div/div[1]/div[2]/nsdq-table')
-    rows = table.text.replace(',', '').split('\n')
-    rows = rows[1:31]
-
-    temp = []
-    data = {'symbol': [], 'date': [], 'open': [], 'high': [], 'low': [], 'close':[], 'volume': []}
-
-    for row in rows:
-        temp.append(row.split(' '))
-
-    for row in temp:
-        data['symbol'].append(symbol)
-        data['date'].append(row[0].replace('/', '-'))
-        data['open'].append(float(row[3].replace('$', '')))
-        data['high'].append(float(row[4].replace('$', '')))
-        data['low'].append(float(row[5].replace('$', '')))
-        data['close'].append(float(row[1].replace('$', '')))
-        data['volume'].append(int(row[2].replace(',', '')))
-    
     return data
 
 
@@ -127,7 +118,7 @@ def get_yahoo_month(driver, symbol):
         if 'Dividend' not in row and 'Splits' not in row:
             temp.append(row.split(' '))
 
-    for row in temp:
+    for row in temp[:30]:
         data['symbol'].append(symbol)
         data['date'].append(f'{row[0]}-{row[1].replace(',', '')}-{row[2]}')
         data['open'].append(float(row[3]))
@@ -139,8 +130,12 @@ def get_yahoo_month(driver, symbol):
     return data
 
 
+# this gets all necessary data of all stocks on S&P500
+# saves 'raw' data as csv and then returns it.
 def get_data(frame):
-    driver = webdriver.Firefox()
+    options = webdriver.FirefoxOptions()
+    options.page_load_strategy = 'eager'
+    driver = webdriver.Firefox(options=options)
 
     data = []
     for i, row in frame.iterrows():
@@ -149,26 +144,26 @@ def get_data(frame):
                 data.append(get_nyse_month(driver, row['exchange_url'], row['symbol']))
                 print(f'{i} NYSE: {row['symbol']}')
                 time.sleep(.5)
-            elif 'nasdaq' in row['exchange_url']:
-                data.append(get_nasdaq_month(driver, row['exchange_url'], row['symbol']))
-                print(f'{i} NASDAQ: {row['symbol']}')
-                time.sleep(.5)
             elif 'yahoo' in row['exchange_url']:
                 data.append(get_yahoo_month(driver, row['symbol']))
                 print(f'{i} YAHOO: {row['symbol']}')
                 time.sleep(.5)
         except TimeoutException:
             try:
-                time.sleep(5)
+                time.sleep(2)
                 data.append(get_yahoo_month(driver, row['symbol'])) # what if this times out too...
                 print(f'{i} YAHOO: {row['symbol']}')
             except TimeoutException:
                 print(f'Error:{i} - {row['symbol']}')
 
-
     print(len(data))
     driver.quit()
-    return data
+
+    df_list = [pd.DataFrame(x) for x in data]
+    theta = pd.concat(df_list)
+    theta.to_csv('data/csv/30days.csv')
+
+    return theta
 
 
 def split_snp(snp):
@@ -179,43 +174,31 @@ def split_snp(snp):
     nyse = snp.query('exchange_url.str.contains("nyse") | exchange_url.str.contains("yahoo")').reset_index()
     nasdaq = snp.query('exchange_url.str.contains("nasdaq")').reset_index()
 
-    nyse_mid = math.ceil(len(nyse) / 2)
+    for i, row in nasdaq.iterrows():
+        nasdaq.loc[i, 'exchange_url'] = 'yahoo'
+    x = 250-len(nasdaq)
 
-    yahoo = nyse[nyse_mid:].reset_index()
-    nyse = nyse[:nyse_mid].reset_index()
+    yahoo = nyse[:96]
+    nyse = nyse[96:].reset_index()
+
+    yahoo = pd.concat([yahoo, nasdaq]).reset_index()
 
     data = {'exchange_url': [], 'symbol': []}
     count = 0
     nyse_i = 0
-    nasdaq_i = 0
     yahoo_i = 0
-
-    while (count < (len(nasdaq)+len(nyse)+len(yahoo))+1):
-        if nasdaq_i < len(nasdaq):
-            if count % 3 == 0:
+    print(len(yahoo))
+    print(len(nyse))
+    while count < len(snp):
+        if count % 2 == 0 and nyse_i < len(nyse):
                 data['exchange_url'].append(nyse.loc[nyse_i, 'exchange_url'])
                 data['symbol'].append(nyse.loc[nyse_i, 'symbol'])
                 nyse_i += 1
 
-            if count % 3 == 1:
-                data['exchange_url'].append(nasdaq.loc[nasdaq_i, 'exchange_url'])
-                data['symbol'].append(nasdaq.loc[nasdaq_i, 'symbol'])
-                nasdaq_i += 1
-
-            if count % 3 == 2:
-                data['exchange_url'].append('yahoo')
-                data['symbol'].append(yahoo.loc[yahoo_i, 'symbol'])
-                yahoo_i += 1
-        else:
-            if count % 2 == 0 and nyse_i < len(nyse):
-                data['exchange_url'].append(nyse.loc[nyse_i, 'exchange_url'])
-                data['symbol'].append(nyse.loc[nyse_i, 'symbol'])
-                nyse_i += 1
-
-            if count % 2 == 1 and yahoo_i < len(yahoo):
-                data['exchange_url'].append('yahoo')
-                data['symbol'].append(yahoo.loc[yahoo_i, 'symbol'])
-                yahoo_i += 1
+        if count % 2 == 1 and yahoo_i < len(yahoo):
+            data['exchange_url'].append('yahoo')
+            data['symbol'].append(yahoo.loc[yahoo_i, 'symbol'])
+            yahoo_i += 1
         count += 1
 
     return data
