@@ -39,7 +39,7 @@ def sectors(snp=None, frame=None):
         if '.' in sym:
             sym = sym.replace('.', '-')
         f = frame.query('symbol == @sym')
-        changes.append(round(((f.iloc[0]['close'] / f.iloc[1]['close']) - 1)*100, 2))
+        changes.append(((f.iloc[0]['close'] / f.iloc[1]['close']) - 1)*100)
         dates.append(pd.to_datetime(f.query('symbol == @sym')['date'].iloc[0]))
 
     df_join = snp.join(frame, lsuffix='_snp', rsuffix='_30days').drop(columns=['symbol_30days'])

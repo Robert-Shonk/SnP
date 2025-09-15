@@ -58,12 +58,11 @@ def get_nyse_month(driver, url, symbol):
 
     wait = WebDriverWait(driver, timeout=10)
     wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'flex_tr')))
-    rows = driver.find_elements(By.CLASS_NAME, 'flex_tr')[:29]
+    rows = driver.find_elements(By.CLASS_NAME, 'flex_tr')[:30]
 
     temp = []
     data = {'symbol': [], 'date': [], 'open': [], 'high': [], 'low': [], 'close':[], 'volume': []}
 
-    # need to get today's info separately.
     wait = WebDriverWait(driver, timeout=10)
     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(9) > span:nth-child(2)')))
 
@@ -74,26 +73,36 @@ def get_nyse_month(driver, url, symbol):
     today_close = float(driver.find_element(By.CLASS_NAME, 'd-dquote-x3').text.replace(',', ''))
     today_date = driver.find_element(By.CSS_SELECTOR, '.d-dquote-time > span:nth-child(2)').text.split(' ')[0].replace('/', '-')
 
-    data['symbol'].append(symbol)
-    data['date'].append(today_date)
-    data['open'].append(today_open)
-    data['high'].append(today_high)
-    data['low'].append(today_low)
-    data['close'].append(today_close)
-    data['volume'].append(today_volume)
-
-    # get previous 29 days
     for row in rows:
         temp.append(row.text.replace(',', '').split('\n'))
 
-    for row in temp:
+    # check if we need to get today's info separately.
+    if today_date == temp[0][0].replace('/', '-'):
+        for row in temp:
+            data['symbol'].append(symbol)
+            data['date'].append(row[0].replace('/', '-'))
+            data['open'].append(float(row[1]))
+            data['high'].append(float(row[2]))
+            data['low'].append(float(row[3]))
+            data['close'].append(float(row[4]))
+            data['volume'].append(int(row[5].replace(',', '')))
+    else:
         data['symbol'].append(symbol)
-        data['date'].append(row[0].replace('/', '-'))
-        data['open'].append(float(row[1]))
-        data['high'].append(float(row[2]))
-        data['low'].append(float(row[3]))
-        data['close'].append(float(row[4]))
-        data['volume'].append(int(row[5].replace(',', '')))
+        data['date'].append(today_date)
+        data['open'].append(today_open)
+        data['high'].append(today_high)
+        data['low'].append(today_low)
+        data['close'].append(today_close)
+        data['volume'].append(today_volume)
+
+        for row in temp[1:30]:
+            data['symbol'].append(symbol)
+            data['date'].append(row[0].replace('/', '-'))
+            data['open'].append(float(row[1]))
+            data['high'].append(float(row[2]))
+            data['low'].append(float(row[3]))
+            data['close'].append(float(row[4]))
+            data['volume'].append(int(row[5].replace(',', '')))
 
     return data
 
@@ -143,7 +152,7 @@ def get_data(frame):
             if 'nyse' in row['exchange_url']:
                 data.append(get_nyse_month(driver, row['exchange_url'], row['symbol']))
                 print(f'{i} NYSE: {row['symbol']}')
-                time.sleep(.5)
+                #time.sleep(.5)
             elif 'yahoo' in row['exchange_url']:
                 data.append(get_yahoo_month(driver, row['symbol']))
                 print(f'{i} YAHOO: {row['symbol']}')
@@ -178,8 +187,8 @@ def split_snp(snp):
         nasdaq.loc[i, 'exchange_url'] = 'yahoo'
     x = 250-len(nasdaq)
 
-    yahoo = nyse[:96]
-    nyse = nyse[96:].reset_index()
+    yahoo = nyse[:x]
+    nyse = nyse[x:].reset_index()
 
     yahoo = pd.concat([yahoo, nasdaq]).reset_index()
 
