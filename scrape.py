@@ -18,6 +18,7 @@ from selenium.webdriver.support import expected_conditions as EC
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0'
 }
+months = {'Jan':'01', 'Feb':'02', 'Mar':'03', 'Apr':'04', 'May':'05', 'Jun':'06', 'Jul':'07', 'Aug':'08', 'Sep':'09', 'Oct':'10', 'Nov':'11', 'Dec':'12'}
 
 def get_list():
     data = {'exchange_url': [], 'symbol': [], 'security': [], 'sector': [], 'sub_industry': [], 'hq_location': [], 'date_added': [], 'CIK': [], 'founded': []}
@@ -53,17 +54,17 @@ def get_list():
         return -1
     
 
-def get_nyse_month(driver, url, symbol):
+def get_nyse_ytd(driver, url, symbol, year_start='01-02-2025'): # not correct date format for nyse
     driver.get(url)
 
-    wait = WebDriverWait(driver, timeout=10)
+    wait = WebDriverWait(driver, timeout=5)
     wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'flex_tr')))
-    rows = driver.find_elements(By.CLASS_NAME, 'flex_tr')[:30]
+    rows = driver.find_elements(By.CLASS_NAME, 'flex_tr')
 
     temp = []
     data = {'symbol': [], 'date': [], 'open': [], 'high': [], 'low': [], 'close':[], 'volume': []}
 
-    wait = WebDriverWait(driver, timeout=10)
+    wait = WebDriverWait(driver, timeout=6.5)
     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(9) > span:nth-child(2)')))
 
     today_open = float(driver.find_element(By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(9) > span:nth-child(2)').text.replace(',', ''))
@@ -86,6 +87,9 @@ def get_nyse_month(driver, url, symbol):
             data['low'].append(float(row[3]))
             data['close'].append(float(row[4]))
             data['volume'].append(int(row[5].replace(',', '')))
+
+            if row[0].replace('/', '-') == year_start:
+                break
     else:
         data['symbol'].append(symbol)
         data['date'].append(today_date)
@@ -95,7 +99,7 @@ def get_nyse_month(driver, url, symbol):
         data['close'].append(today_close)
         data['volume'].append(today_volume)
 
-        for row in temp[1:30]:
+        for row in temp[1:]:
             data['symbol'].append(symbol)
             data['date'].append(row[0].replace('/', '-'))
             data['open'].append(float(row[1]))
@@ -104,11 +108,14 @@ def get_nyse_month(driver, url, symbol):
             data['close'].append(float(row[4]))
             data['volume'].append(int(row[5].replace(',', '')))
 
+            if row[0].replace('/', '-') == year_start:
+                break
+
     return data
 
 
 # base url from urls.py (urls.stock_base_url)
-def get_yahoo_month(driver, symbol):
+def get_yahoo_ytd(driver, symbol, year_start='Jan-2-2025'):
     if '.' in symbol:
         symbol = symbol.replace('.', '-')
 
@@ -127,7 +134,7 @@ def get_yahoo_month(driver, symbol):
         if 'Dividend' not in row and 'Splits' not in row:
             temp.append(row.split(' '))
 
-    for row in temp[:30]:
+    for row in temp:
         data['symbol'].append(symbol)
         data['date'].append(f'{row[0]}-{row[1].replace(',', '')}-{row[2]}')
         data['open'].append(float(row[3]))
@@ -136,31 +143,35 @@ def get_yahoo_month(driver, symbol):
         data['close'].append(float(row[6]))
         data['volume'].append(int(row[8].replace(',', '')))
 
+        if f'{row[0]}-{row[1].replace(',', '')}-{row[2]}' == year_start:
+            break
+
     return data
 
 
 # this gets all necessary data of all stocks on S&P500
 # saves 'raw' data as csv and then returns it.
-def get_data(frame):
+def get_ytd(frame):
     options = webdriver.FirefoxOptions()
     options.page_load_strategy = 'eager'
+    options.add_argument('--headless')
     driver = webdriver.Firefox(options=options)
 
     data = []
     for i, row in frame.iterrows():
         try:
             if 'nyse' in row['exchange_url']:
-                data.append(get_nyse_month(driver, row['exchange_url'], row['symbol']))
+                data.append(get_nyse_ytd(driver, row['exchange_url'], row['symbol']))
                 print(f'{i} NYSE: {row['symbol']}')
                 #time.sleep(.5)
             elif 'yahoo' in row['exchange_url']:
-                data.append(get_yahoo_month(driver, row['symbol']))
+                data.append(get_yahoo_ytd(driver, row['symbol']))
                 print(f'{i} YAHOO: {row['symbol']}')
                 time.sleep(.5)
         except TimeoutException:
             try:
                 time.sleep(2)
-                data.append(get_yahoo_month(driver, row['symbol'])) # what if this times out too...
+                data.append(get_yahoo_ytd(driver, row['symbol'])) # what if this times out too...
                 print(f'{i} YAHOO: {row['symbol']}')
             except TimeoutException:
                 print(f'Error:{i} - {row['symbol']}')
@@ -170,7 +181,7 @@ def get_data(frame):
 
     df_list = [pd.DataFrame(x) for x in data]
     theta = pd.concat(df_list)
-    theta.to_csv('data/csv/30days.csv')
+    theta.to_csv('data/csv/snp_YTD.csv')
 
     return theta
 
@@ -196,8 +207,7 @@ def split_snp(snp):
     count = 0
     nyse_i = 0
     yahoo_i = 0
-    print(len(yahoo))
-    print(len(nyse))
+
     while count < len(snp):
         if count % 2 == 0 and nyse_i < len(nyse):
                 data['exchange_url'].append(nyse.loc[nyse_i, 'exchange_url'])
