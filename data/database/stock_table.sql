@@ -1,0 +1,9 @@
+CREATE TABLE stock (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    symbol TEXT UNIQUE NOT NULL,
+    date TEXT NOT NULL,
+    open REAL NOT NULL,
+    high REAL NOT NULL,
+    close REAL NOT NULL,
+    volume INTEGER NOT NULL
+);
