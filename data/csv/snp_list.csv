@@ -18,7 +18,7 @@
 16,https://www.nyse.com/quote/XNYS:ALLE,ALLE,Allegion,Industrials,Building Products,"Dublin, Ireland",2013-12-02,0001579241,1908
 17,https://www.nasdaq.com/market-activity/stocks/lnt,LNT,Alliant Energy,Utilities,Electric Utilities,"Madison, Wisconsin",2016-07-01,0000352541,1917
 18,https://www.nyse.com/quote/XNYS:ALL,ALL,Allstate,Financials,Property & Casualty Insurance,"Northbrook, Illinois",1995-07-13,0000899051,1931
-19,https://www.nasdaq.com/market-activity/stocks/googl,GOOGL,Alphabet Inc. (Class A),Communication Services,Interactive Media & Services,"Mountain View, California",2014-04-03,0001652044,1998
+19,https://www.nasdaq.com/market-activity/stocks/googl,GOOGL,Alphabet Inc. (Class A),Communication Services,Interactive Media & Services,"Mountain View, California",2006-04-03,0001652044,1998
 21,https://www.nyse.com/quote/XNYS:MO,MO,Altria,Consumer Staples,Tobacco,"Richmond, Virginia",1957-03-04,0000764180,1985
 22,https://www.nasdaq.com/market-activity/stocks/amzn,AMZN,Amazon,Consumer Discretionary,Broadline Retail,"Seattle, Washington",2005-11-18,0001018724,1994
 23,https://www.nyse.com/quote/XNYS:AMCR,AMCR,Amcor,Materials,Paper & Plastic Packaging Products & Materials,"Warmley, Bristol, United Kingdom",2019-06-07,0001748790,2019 (1860)
@@ -38,47 +38,47 @@
 37,https://www.nyse.com/quote/XNYS:APO,APO,Apollo Global Management,Financials,Asset Management & Custody Banks,"New York City, New York",2024-12-23,0001858681,1990
 38,https://www.nasdaq.com/market-activity/stocks/aapl,AAPL,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals","Cupertino, California",1982-11-30,0000320193,1977
 39,https://www.nasdaq.com/market-activity/stocks/amat,AMAT,Applied Materials,Information Technology,Semiconductor Materials & Equipment,"Santa Clara, California",1995-03-16,0000006951,1967
-40,https://www.nyse.com/quote/XNYS:APTV,APTV,Aptiv,Consumer Discretionary,Automotive Parts & Equipment,"Dublin, Ireland",2012-12-24,0001521332,1994
-41,https://www.nasdaq.com/market-activity/stocks/acgl,ACGL,Arch Capital Group,Financials,Property & Casualty Insurance,"Hamilton, Bermuda",2022-11-01,0000947484,1995
-42,https://www.nyse.com/quote/XNYS:ADM,ADM,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services,"Chicago, Illinois",1957-03-04,0000007084,1902
-43,https://www.nyse.com/quote/XNYS:ANET,ANET,Arista Networks,Information Technology,Communications Equipment,"Santa Clara, California",2018-08-28,0001596532,2004
-44,https://www.nyse.com/quote/XNYS:AJG,AJG,Arthur J. Gallagher & Co.,Financials,Insurance Brokers,"Rolling Meadows, Illinois",2016-05-31,0000354190,1927
-45,https://www.nyse.com/quote/XNYS:AIZ,AIZ,Assurant,Financials,Multi-line Insurance,"Atlanta, Georgia",2007-04-10,0001267238,1892
-46,https://www.nyse.com/quote/XNYS:T,T,AT&T,Communication Services,Integrated Telecommunication Services,"Dallas, Texas",1983-11-30,0000732717,1983 (1885)
-47,https://www.nyse.com/quote/XNYS:ATO,ATO,Atmos Energy,Utilities,Gas Utilities,"Dallas, Texas",2019-02-15,0000731802,1906
-48,https://www.nasdaq.com/market-activity/stocks/adsk,ADSK,Autodesk,Information Technology,Application Software,"San Francisco, California",1989-12-01,0000769397,1982
-49,https://www.nasdaq.com/market-activity/stocks/adp,ADP,Automatic Data Processing,Industrials,Human Resource & Employment Services,"Roseland, New Jersey",1981-03-31,0000008670,1949
-50,https://www.nyse.com/quote/XNYS:AZO,AZO,AutoZone,Consumer Discretionary,Automotive Retail,"Memphis, Tennessee",1997-01-02,0000866787,1979
-51,https://www.nyse.com/quote/XNYS:AVB,AVB,AvalonBay Communities,Real Estate,Multi-Family Residential REITs,"Arlington, Virginia",2007-01-10,0000915912,1978
-52,https://www.nyse.com/quote/XNYS:AVY,AVY,Avery Dennison,Materials,Paper & Plastic Packaging Products & Materials,"Mentor, Ohio",1987-12-31,0000008818,1935
-53,https://www.nasdaq.com/market-activity/stocks/axon,AXON,Axon Enterprise,Industrials,Aerospace & Defense,"Scottsdale, Arizona",2023-05-04,0001069183,1993
-54,https://www.nasdaq.com/market-activity/stocks/bkr,BKR,Baker Hughes,Energy,Oil & Gas Equipment & Services,"Houston, Texas",2017-07-07,0001701605,2017
-55,https://www.nyse.com/quote/XNYS:BALL,BALL,Ball Corporation,Materials,"Metal, Glass & Plastic Containers","Broomfield, Colorado",1984-10-31,0000009389,1880
-56,https://www.nyse.com/quote/XNYS:BAC,BAC,Bank of America,Financials,Diversified Banks,"Charlotte, North Carolina",1976-06-30,0000070858,1998 (1923 / 1874)
-57,https://www.nyse.com/quote/XNYS:BAX,BAX,Baxter International,Health Care,Health Care Equipment,"Deerfield, Illinois",1972-09-30,0000010456,1931
-58,https://www.nyse.com/quote/XNYS:BDX,BDX,Becton Dickinson,Health Care,Health Care Equipment,"Franklin Lakes, New Jersey",1972-09-30,0000010795,1897
-59,https://www.nyse.com/quote/XNYS:BRK.B,BRK.B,Berkshire Hathaway,Financials,Multi-Sector Holdings,"Omaha, Nebraska",2010-02-16,0001067983,1839
-60,https://www.nyse.com/quote/XNYS:BBY,BBY,Best Buy,Consumer Discretionary,Computer & Electronics Retail,"Richfield, Minnesota",1999-06-29,0000764478,1966
-61,https://www.nasdaq.com/market-activity/stocks/tech,TECH,Bio-Techne,Health Care,Life Sciences Tools & Services,"Minneapolis, Minnesota",2021-08-30,0000842023,1976
-62,https://www.nasdaq.com/market-activity/stocks/biib,BIIB,Biogen,Health Care,Biotechnology,"Cambridge, Massachusetts",2003-11-13,0000875045,1978
-63,https://www.nyse.com/quote/XNYS:BLK,BLK,BlackRock,Financials,Asset Management & Custody Banks,"New York City, New York",2011-04-04,0002012383,1988
-64,https://www.nyse.com/quote/XNYS:BX,BX,Blackstone Inc.,Financials,Asset Management & Custody Banks,"New York City, New York",2023-09-18,0001393818,1985
-65,https://www.nyse.com/quote/XNYS:XYZ,XYZ,"Block, Inc.",Financials,Transaction & Payment Processing Services,none,2025-07-23,0001512673,2009
-66,https://www.nyse.com/quote/XNYS:BK,BK,BNY Mellon,Financials,Asset Management & Custody Banks,"New York City, New York",1995-03-31,0001390777,1784
-67,https://www.nyse.com/quote/XNYS:BA,BA,Boeing,Industrials,Aerospace & Defense,"Arlington, Virginia",1957-03-04,0000012927,1916
-68,https://www.nasdaq.com/market-activity/stocks/bkng,BKNG,Booking Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines","Norwalk, Connecticut",2009-11-06,0001075531,1996
-69,https://www.nyse.com/quote/XNYS:BSX,BSX,Boston Scientific,Health Care,Health Care Equipment,"Marlborough, Massachusetts",1995-02-24,0000885725,1979
-70,https://www.nyse.com/quote/XNYS:BMY,BMY,Bristol Myers Squibb,Health Care,Pharmaceuticals,"New York City, New York",1957-03-04,0000014272,1989 (1887)
-71,https://www.nasdaq.com/market-activity/stocks/avgo,AVGO,Broadcom,Information Technology,Semiconductors,"Palo Alto, California",2014-05-08,0001730168,1961
-72,https://www.nyse.com/quote/XNYS:BR,BR,Broadridge Financial Solutions,Industrials,Data Processing & Outsourced Services,"Lake Success, New York",2018-06-18,0001383312,1962
-73,https://www.nyse.com/quote/XNYS:BRO,BRO,Brown & Brown,Financials,Insurance Brokers,"Daytona Beach, Florida",2021-09-20,0000079282,1939
-74,https://www.nyse.com/quote/XNYS:BF.B,BF.B,Brown–Forman,Consumer Staples,Distillers & Vintners,"Louisville, Kentucky",1982-10-31,0000014693,1870
-75,https://www.nyse.com/quote/XNYS:BLDR,BLDR,Builders FirstSource,Industrials,Building Products,"Irving, Texas",2023-12-18,0001316835,1998
-76,https://www.nyse.com/quote/XNYS:BG,BG,Bunge Global,Consumer Staples,Agricultural Products & Services,"Chesterfield, Missouri",2023-03-15,0001996862,1818
-77,https://www.nyse.com/quote/XNYS:BXP,BXP,"BXP, Inc.",Real Estate,Office REITs,"Boston, Massachusetts",2006-04-03,0001037540,1970
-78,https://www.nasdaq.com/market-activity/stocks/chrw,CHRW,C.H. Robinson,Industrials,Air Freight & Logistics,"Eden Prairie, Minnesota",2007-03-02,0001043277,1905
-79,https://www.nasdaq.com/market-activity/stocks/cdns,CDNS,Cadence Design Systems,Information Technology,Application Software,"San Jose, California",2017-09-18,0000813672,1988
-80,https://www.nasdaq.com/market-activity/stocks/czr,CZR,Caesars Entertainment,Consumer Discretionary,Casinos & Gaming,"Reno, Nevada",2021-03-22,0001590895,1973
+40,https://www.nasdaq.com/market-activity/stocks/app,APP,AppLovin,Information Technology,Application Software,"Palo Alto, California",2025-09-22,0001751008,2012
+41,https://www.nyse.com/quote/XNYS:APTV,APTV,Aptiv,Consumer Discretionary,Automotive Parts & Equipment,"Dublin, Ireland",2012-12-24,0001521332,1994
+42,https://www.nasdaq.com/market-activity/stocks/acgl,ACGL,Arch Capital Group,Financials,Property & Casualty Insurance,"Hamilton, Bermuda",2022-11-01,0000947484,1995
+43,https://www.nyse.com/quote/XNYS:ADM,ADM,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services,"Chicago, Illinois",1957-03-04,0000007084,1902
+44,https://www.nyse.com/quote/XNYS:ANET,ANET,Arista Networks,Information Technology,Communications Equipment,"Santa Clara, California",2018-08-28,0001596532,2004
+45,https://www.nyse.com/quote/XNYS:AJG,AJG,Arthur J. Gallagher & Co.,Financials,Insurance Brokers,"Rolling Meadows, Illinois",2016-05-31,0000354190,1927
+46,https://www.nyse.com/quote/XNYS:AIZ,AIZ,Assurant,Financials,Multi-line Insurance,"Atlanta, Georgia",2007-04-10,0001267238,1892
+47,https://www.nyse.com/quote/XNYS:T,T,AT&T,Communication Services,Integrated Telecommunication Services,"Dallas, Texas",1983-11-30,0000732717,1983 (1885)
+48,https://www.nyse.com/quote/XNYS:ATO,ATO,Atmos Energy,Utilities,Gas Utilities,"Dallas, Texas",2019-02-15,0000731802,1906
+49,https://www.nasdaq.com/market-activity/stocks/adsk,ADSK,Autodesk,Information Technology,Application Software,"San Francisco, California",1989-12-01,0000769397,1982
+50,https://www.nasdaq.com/market-activity/stocks/adp,ADP,Automatic Data Processing,Industrials,Human Resource & Employment Services,"Roseland, New Jersey",1981-03-31,0000008670,1949
+51,https://www.nyse.com/quote/XNYS:AZO,AZO,AutoZone,Consumer Discretionary,Automotive Retail,"Memphis, Tennessee",1997-01-02,0000866787,1979
+52,https://www.nyse.com/quote/XNYS:AVB,AVB,AvalonBay Communities,Real Estate,Multi-Family Residential REITs,"Arlington, Virginia",2007-01-10,0000915912,1978
+53,https://www.nyse.com/quote/XNYS:AVY,AVY,Avery Dennison,Materials,Paper & Plastic Packaging Products & Materials,"Mentor, Ohio",1987-12-31,0000008818,1935
+54,https://www.nasdaq.com/market-activity/stocks/axon,AXON,Axon Enterprise,Industrials,Aerospace & Defense,"Scottsdale, Arizona",2023-05-04,0001069183,1993
+55,https://www.nasdaq.com/market-activity/stocks/bkr,BKR,Baker Hughes,Energy,Oil & Gas Equipment & Services,"Houston, Texas",2017-07-07,0001701605,2017
+56,https://www.nyse.com/quote/XNYS:BALL,BALL,Ball Corporation,Materials,"Metal, Glass & Plastic Containers","Broomfield, Colorado",1984-10-31,0000009389,1880
+57,https://www.nyse.com/quote/XNYS:BAC,BAC,Bank of America,Financials,Diversified Banks,"Charlotte, North Carolina",1976-06-30,0000070858,1998 (1923 / 1874)
+58,https://www.nyse.com/quote/XNYS:BAX,BAX,Baxter International,Health Care,Health Care Equipment,"Deerfield, Illinois",1972-09-30,0000010456,1931
+59,https://www.nyse.com/quote/XNYS:BDX,BDX,Becton Dickinson,Health Care,Health Care Equipment,"Franklin Lakes, New Jersey",1972-09-30,0000010795,1897
+60,https://www.nyse.com/quote/XNYS:BRK.B,BRK.B,Berkshire Hathaway,Financials,Multi-Sector Holdings,"Omaha, Nebraska",2010-02-16,0001067983,1839
+61,https://www.nyse.com/quote/XNYS:BBY,BBY,Best Buy,Consumer Discretionary,Computer & Electronics Retail,"Richfield, Minnesota",1999-06-29,0000764478,1966
+62,https://www.nasdaq.com/market-activity/stocks/tech,TECH,Bio-Techne,Health Care,Life Sciences Tools & Services,"Minneapolis, Minnesota",2021-08-30,0000842023,1976
+63,https://www.nasdaq.com/market-activity/stocks/biib,BIIB,Biogen,Health Care,Biotechnology,"Cambridge, Massachusetts",2003-11-13,0000875045,1978
+64,https://www.nyse.com/quote/XNYS:BLK,BLK,BlackRock,Financials,Asset Management & Custody Banks,"New York City, New York",2011-04-04,0002012383,1988
+65,https://www.nyse.com/quote/XNYS:BX,BX,Blackstone Inc.,Financials,Asset Management & Custody Banks,"New York City, New York",2023-09-18,0001393818,1985
+66,https://www.nyse.com/quote/XNYS:XYZ,XYZ,"Block, Inc.",Financials,Transaction & Payment Processing Services,none,2025-07-23,0001512673,2009
+67,https://www.nyse.com/quote/XNYS:BK,BK,BNY Mellon,Financials,Asset Management & Custody Banks,"New York City, New York",1995-03-31,0001390777,1784
+68,https://www.nyse.com/quote/XNYS:BA,BA,Boeing,Industrials,Aerospace & Defense,"Arlington, Virginia",1957-03-04,0000012927,1916
+69,https://www.nasdaq.com/market-activity/stocks/bkng,BKNG,Booking Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines","Norwalk, Connecticut",2009-11-06,0001075531,1996
+70,https://www.nyse.com/quote/XNYS:BSX,BSX,Boston Scientific,Health Care,Health Care Equipment,"Marlborough, Massachusetts",1995-02-24,0000885725,1979
+71,https://www.nyse.com/quote/XNYS:BMY,BMY,Bristol Myers Squibb,Health Care,Pharmaceuticals,"New York City, New York",1957-03-04,0000014272,1989 (1887)
+72,https://www.nasdaq.com/market-activity/stocks/avgo,AVGO,Broadcom,Information Technology,Semiconductors,"Palo Alto, California",2014-05-08,0001730168,1961
+73,https://www.nyse.com/quote/XNYS:BR,BR,Broadridge Financial Solutions,Industrials,Data Processing & Outsourced Services,"Lake Success, New York",2018-06-18,0001383312,1962
+74,https://www.nyse.com/quote/XNYS:BRO,BRO,Brown & Brown,Financials,Insurance Brokers,"Daytona Beach, Florida",2021-09-20,0000079282,1939
+75,https://www.nyse.com/quote/XNYS:BF.B,BF.B,Brown–Forman,Consumer Staples,Distillers & Vintners,"Louisville, Kentucky",1982-10-31,0000014693,1870
+76,https://www.nyse.com/quote/XNYS:BLDR,BLDR,Builders FirstSource,Industrials,Building Products,"Irving, Texas",2023-12-18,0001316835,1998
+77,https://www.nyse.com/quote/XNYS:BG,BG,Bunge Global,Consumer Staples,Agricultural Products & Services,"Chesterfield, Missouri",2023-03-15,0001996862,1818
+78,https://www.nyse.com/quote/XNYS:BXP,BXP,"BXP, Inc.",Real Estate,Office REITs,"Boston, Massachusetts",2006-04-03,0001037540,1970
+79,https://www.nasdaq.com/market-activity/stocks/chrw,CHRW,C.H. Robinson,Industrials,Air Freight & Logistics,"Eden Prairie, Minnesota",2007-03-02,0001043277,1905
+80,https://www.nasdaq.com/market-activity/stocks/cdns,CDNS,Cadence Design Systems,Information Technology,Application Software,"San Jose, California",2017-09-18,0000813672,1988
 81,https://www.nyse.com/quote/XNYS:CPT,CPT,Camden Property Trust,Real Estate,Multi-Family Residential REITs,"Houston, Texas",2022-04-04,0000906345,1981
 82,https://www.nyse.com/quote/XNYS:CPB,CPB,Campbell's Company (The),Consumer Staples,Packaged Foods & Meats,"Camden, New Jersey",1957-03-04,0000016732,1869
 83,https://www.nyse.com/quote/XNYS:COF,COF,Capital One,Financials,Consumer Finance,"Tysons Corner, Virginia",1998-07-01,0000927628,1994
@@ -97,7 +97,7 @@
 96,https://www.nyse.com/quote/XNYS:CRL,CRL,Charles River Laboratories,Health Care,Life Sciences Tools & Services,"Wilmington, Massachusetts",2021-05-14,0001100682,1947
 97,https://www.nyse.com/quote/XNYS:SCHW,SCHW,Charles Schwab Corporation,Financials,Investment Banking & Brokerage,"Westlake, Texas",1997-06-02,0000316709,1971
 98,https://www.nasdaq.com/market-activity/stocks/chtr,CHTR,Charter Communications,Communication Services,Cable & Satellite,"Stamford, Connecticut",2016-09-08,0001091667,1993
-99,https://www.nyse.com/quote/XNYS:CVX,CVX,Chevron Corporation,Energy,Integrated Oil & Gas,"San Ramon, California",1957-03-04,0000093410,1879
+99,https://www.nyse.com/quote/XNYS:CVX,CVX,Chevron Corporation,Energy,Integrated Oil & Gas,"Houston, Texas",1957-03-04,0000093410,1879
 100,https://www.nyse.com/quote/XNYS:CMG,CMG,Chipotle Mexican Grill,Consumer Discretionary,Restaurants,"Newport Beach, California",2011-04-28,0001058090,1993
 101,https://www.nyse.com/quote/XNYS:CB,CB,Chubb Limited,Financials,Property & Casualty Insurance,"Zurich, Switzerland",2010-07-15,0000896159,1985
 102,https://www.nyse.com/quote/XNYS:CHD,CHD,Church & Dwight,Consumer Staples,Household Products,"Ewing, New Jersey",2015-12-29,0000313927,1847
@@ -165,8 +165,8 @@
 164,https://www.nyse.com/quote/XNYS:EW,EW,Edwards Lifesciences,Health Care,Health Care Equipment,"Irvine, California",2011-04-01,0001099800,1958
 165,https://www.nasdaq.com/market-activity/stocks/ea,EA,Electronic Arts,Communication Services,Interactive Home Entertainment,"Redwood City, California",2002-07-22,0000712515,1982
 166,https://www.nyse.com/quote/XNYS:ELV,ELV,Elevance Health,Health Care,Managed Health Care,"Indianapolis, Indiana",2002-07-25,0001156039,2014 (1946)
-167,https://www.nyse.com/quote/XNYS:EMR,EMR,Emerson Electric,Industrials,Electrical Components & Equipment,"Ferguson, Missouri",1965-03-31,0000032604,1890
-168,https://www.nasdaq.com/market-activity/stocks/enph,ENPH,Enphase Energy,Information Technology,Semiconductor Materials & Equipment,"Fremont, California",2021-01-07,0001463101,2006
+167,https://www.nyse.com/quote/XNYS:EME,EME,Emcor,Industrials,Construction & Engineering,"Norwalk, Connecticut",2025-09-22,0000105634,1994
+168,https://www.nyse.com/quote/XNYS:EMR,EMR,Emerson Electric,Industrials,Electrical Components & Equipment,"Ferguson, Missouri",1965-03-31,0000032604,1890
 169,https://www.nyse.com/quote/XNYS:ETR,ETR,Entergy,Utilities,Electric Utilities,"New Orleans, Louisiana",1957-03-04,0000065984,1913
 170,https://www.nyse.com/quote/XNYS:EOG,EOG,EOG Resources,Energy,Oil & Gas Exploration & Production,"Houston, Texas",2000-11-02,0000821189,1999
 171,https://www.nyse.com/quote/XNYS:EPAM,EPAM,EPAM Systems,Information Technology,IT Consulting & Other Services,"Newtown, Pennsylvania",2021-12-14,0001352010,1993
@@ -240,7 +240,7 @@
 240,https://www.nasdaq.com/market-activity/stocks/hban,HBAN,Huntington Bancshares,Financials,Regional Banks,"Columbus, Ohio; Detroit, Michigan",1997-08-28,0000049196,1866
 241,https://www.nyse.com/quote/XNYS:HII,HII,Huntington Ingalls Industries,Industrials,Aerospace & Defense,"Newport News, Virginia",2018-01-03,0001501585,2011
 242,https://www.nyse.com/quote/XNYS:IBM,IBM,IBM,Information Technology,IT Consulting & Other Services,"Armonk, New York",1957-03-04,0000051143,1911
-243,https://www.nyse.com/quote/XNYS:IEX,IEX,IDEX Corporation,Industrials,Industrial Machinery & Supplies & Components,"Lake Forest, Illinois",2019-08-09,0000832101,1988
+243,https://www.nyse.com/quote/XNYS:IEX,IEX,IDEX Corporation,Industrials,Industrial Machinery & Supplies & Components,"Northbrook, Illinois",2019-08-09,0000832101,1988
 244,https://www.nasdaq.com/market-activity/stocks/idxx,IDXX,Idexx Laboratories,Health Care,Health Care Equipment,"Westbrook, Maine",2017-01-05,0000874716,1983
 245,https://www.nyse.com/quote/XNYS:ITW,ITW,Illinois Tool Works,Industrials,Industrial Machinery & Supplies & Components,"Glenview, Illinois",1986-02-28,0000049826,1912
 246,https://www.nasdaq.com/market-activity/stocks/incy,INCY,Incyte,Health Care,Biotechnology,"Wilmington, Delaware",2017-02-28,0000879169,1991
@@ -257,7 +257,7 @@
 257,https://www.nyse.com/quote/XNYS:IVZ,IVZ,Invesco,Financials,Asset Management & Custody Banks,"Atlanta, Georgia",2008-08-21,0000914208,1935
 258,https://www.nyse.com/quote/XNYS:INVH,INVH,Invitation Homes,Real Estate,Single-Family Residential REITs,"Dallas, Texas",2022-09-19,0001687229,2012
 259,https://www.nyse.com/quote/XNYS:IQV,IQV,IQVIA,Health Care,Life Sciences Tools & Services,"Durham, North Carolina",2017-08-29,0001478242,1982
-260,https://www.nyse.com/quote/XNYS:IRM,IRM,Iron Mountain,Real Estate,Other Specialized REITs,"Boston, Massachusetts",2009-01-06,0001020569,1951
+260,https://www.nyse.com/quote/XNYS:IRM,IRM,Iron Mountain,Real Estate,Other Specialized REITs,"Portsmouth, New Hampshire",2009-01-06,0001020569,1951
 261,https://www.nasdaq.com/market-activity/stocks/jbht,JBHT,J.B. Hunt,Industrials,Cargo Ground Transportation,"Lowell, Arkansas",2015-07-01,0000728535,1961
 262,https://www.nyse.com/quote/XNYS:JBL,JBL,Jabil,Information Technology,Electronic Manufacturing Services,"St. Petersburg, Florida",2023-12-18,0000898293,1966
 263,https://www.nasdaq.com/market-activity/stocks/jkhy,JKHY,Jack Henry & Associates,Financials,Transaction & Payment Processing Services,"Monett, Missouri",2018-11-13,0000779152,1976
@@ -288,7 +288,7 @@
 288,https://www.nyse.com/quote/XNYS:LLY,LLY,Lilly (Eli),Health Care,Pharmaceuticals,"Indianapolis, Indiana",1970-12-31,0000059478,1876
 289,https://www.nasdaq.com/market-activity/stocks/lin,LIN,Linde plc,Materials,Industrial Gases,"Guildford, United Kingdom",1992-07-01,0001707925,1879
 290,https://www.nyse.com/quote/XNYS:LYV,LYV,Live Nation Entertainment,Communication Services,Movies & Entertainment,"Beverly Hills, California",2019-12-23,0001335258,2010
-291,https://www.nasdaq.com/market-activity/stocks/lkq,LKQ,LKQ Corporation,Consumer Discretionary,Distributors,"Chicago, Illinois",2016-05-23,0001065696,1998
+291,https://www.nasdaq.com/market-activity/stocks/lkq,LKQ,LKQ Corporation,Consumer Discretionary,Distributors,"Nashville, Tennessee",2016-05-23,0001065696,1998
 292,https://www.nyse.com/quote/XNYS:LMT,LMT,Lockheed Martin,Industrials,Aerospace & Defense,"Bethesda, Maryland",1957-03-04,0000936468,1995
 293,https://www.nyse.com/quote/XNYS:L,L,Loews Corporation,Financials,Multi-line Insurance,"New York City, New York",1995-05-31,0000060086,1959
 294,https://www.nyse.com/quote/XNYS:LOW,LOW,Lowe's,Consumer Discretionary,Home Improvement Retail,"Mooresville, North Carolina",1984-02-29,0000060667,1904/1946/1959
@@ -296,106 +296,106 @@
 296,https://www.nyse.com/quote/XNYS:LYB,LYB,LyondellBasell,Materials,Specialty Chemicals,"Rotterdam, Netherlands",2012-09-05,0001489393,2007
 297,https://www.nyse.com/quote/XNYS:MTB,MTB,M&T Bank,Financials,Regional Banks,"Buffalo, New York",2004-02-23,0000036270,1856
 298,https://www.nyse.com/quote/XNYS:MPC,MPC,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing,"Findlay, Ohio",2011-07-01,0001510295,2009 (1887)
-299,https://www.nasdaq.com/market-activity/stocks/mktx,MKTX,MarketAxess,Financials,Financial Exchanges & Data,"New York City, New York",2019-07-01,0001278021,2000
-300,https://www.nasdaq.com/market-activity/stocks/mar,MAR,Marriott International,Consumer Discretionary,"Hotels, Resorts & Cruise Lines","Bethesda, Maryland",1998-05-29,0001048286,1927
-301,https://www.nyse.com/quote/XNYS:MMC,MMC,Marsh McLennan,Financials,Insurance Brokers,"New York City, New York",1987-08-31,0000062709,1905
-302,https://www.nyse.com/quote/XNYS:MLM,MLM,Martin Marietta Materials,Materials,Construction Materials,"Raleigh, North Carolina",2014-07-02,0000916076,1993
-303,https://www.nyse.com/quote/XNYS:MAS,MAS,Masco,Industrials,Building Products,"Livonia, Michigan",1981-06-30,0000062996,1929
-304,https://www.nyse.com/quote/XNYS:MA,MA,Mastercard,Financials,Transaction & Payment Processing Services,"Harrison, New York",2008-07-18,0001141391,1966
-305,https://www.nasdaq.com/market-activity/stocks/mtch,MTCH,Match Group,Communication Services,Interactive Media & Services,"Dallas, Texas",2021-09-20,0000891103,1986
-306,https://www.nyse.com/quote/XNYS:MKC,MKC,McCormick & Company,Consumer Staples,Packaged Foods & Meats,"Hunt Valley, Maryland",2003-03-20,0000063754,1889
-307,https://www.nyse.com/quote/XNYS:MCD,MCD,McDonald's,Consumer Discretionary,Restaurants,"Chicago, Illinois",1970-06-30,0000063908,1940
-308,https://www.nyse.com/quote/XNYS:MCK,MCK,McKesson Corporation,Health Care,Health Care Distributors,"Irving, Texas",1999-01-13,0000927653,1833
-309,https://www.nyse.com/quote/XNYS:MDT,MDT,Medtronic,Health Care,Health Care Equipment,"Dublin, Ireland",1986-10-31,0001613103,1949
-310,https://www.nyse.com/quote/XNYS:MRK,MRK,Merck & Co.,Health Care,Pharmaceuticals,"Kenilworth, New Jersey",1957-03-04,0000310158,1891
-311,https://www.nasdaq.com/market-activity/stocks/meta,META,Meta Platforms,Communication Services,Interactive Media & Services,"Menlo Park, California",2013-12-23,0001326801,2004
-312,https://www.nyse.com/quote/XNYS:MET,MET,MetLife,Financials,Life & Health Insurance,"New York City, New York",2000-12-11,0001099219,1868
-313,https://www.nyse.com/quote/XNYS:MTD,MTD,Mettler Toledo,Health Care,Life Sciences Tools & Services,"Columbus, Ohio",2016-09-06,0001037646,1945
-314,https://www.nyse.com/quote/XNYS:MGM,MGM,MGM Resorts,Consumer Discretionary,Casinos & Gaming,"Paradise, Nevada",2017-07-26,0000789570,1986
-315,https://www.nasdaq.com/market-activity/stocks/mchp,MCHP,Microchip Technology,Information Technology,Semiconductors,"Chandler, Arizona",2007-09-07,0000827054,1989
-316,https://www.nasdaq.com/market-activity/stocks/mu,MU,Micron Technology,Information Technology,Semiconductors,"Boise, Idaho",1994-09-27,0000723125,1978
-317,https://www.nasdaq.com/market-activity/stocks/msft,MSFT,Microsoft,Information Technology,Systems Software,"Redmond, Washington",1994-06-01,0000789019,1975
-318,https://www.nyse.com/quote/XNYS:MAA,MAA,Mid-America Apartment Communities,Real Estate,Multi-Family Residential REITs,"Memphis, Tennessee",2016-12-02,0000912595,1977
-319,https://www.nasdaq.com/market-activity/stocks/mrna,MRNA,Moderna,Health Care,Biotechnology,"Cambridge, Massachusetts",2021-07-21,0001682852,2010
-320,https://www.nyse.com/quote/XNYS:MHK,MHK,Mohawk Industries,Consumer Discretionary,Home Furnishings,"Calhoun, Georgia",2013-12-23,0000851968,1878
-321,https://www.nyse.com/quote/XNYS:MOH,MOH,Molina Healthcare,Health Care,Managed Health Care,"Long Beach, California",2022-03-02,0001179929,1980
-322,https://www.nyse.com/quote/XNYS:TAP,TAP,Molson Coors Beverage Company,Consumer Staples,Brewers,"Chicago, Illinois",1976-06-30,0000024545,"2005 (Molson 1786, Coors 1873)"
-323,https://www.nasdaq.com/market-activity/stocks/mdlz,MDLZ,Mondelez International,Consumer Staples,Packaged Foods & Meats,"Chicago, Illinois",2012-10-02,0001103982,2012
-324,https://www.nasdaq.com/market-activity/stocks/mpwr,MPWR,Monolithic Power Systems,Information Technology,Semiconductors,"Kirkland, Washington",2021-02-12,0001280452,1997
-325,https://www.nasdaq.com/market-activity/stocks/mnst,MNST,Monster Beverage,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,"Corona, California",2012-06-28,0000865752,2012 (1935)
-326,https://www.nyse.com/quote/XNYS:MCO,MCO,Moody's Corporation,Financials,Financial Exchanges & Data,"New York City, New York",1998-07-01,0001059556,1909
-327,https://www.nyse.com/quote/XNYS:MS,MS,Morgan Stanley,Financials,Investment Banking & Brokerage,"New York City, New York",1993-07-29,0000895421,1935
-328,https://www.nyse.com/quote/XNYS:MOS,MOS,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals,"Tampa, Florida",2011-09-26,0001285785,2004 (1865 / 1909)
-329,https://www.nyse.com/quote/XNYS:MSI,MSI,Motorola Solutions,Information Technology,Communications Equipment,"Chicago, Illinois",1957-03-04,0000068505,1928 (2011)
-330,https://www.nyse.com/quote/XNYS:MSCI,MSCI,MSCI Inc.,Financials,Financial Exchanges & Data,"New York City, New York",2018-04-04,0001408198,1969
-331,https://www.nasdaq.com/market-activity/stocks/ndaq,NDAQ,"Nasdaq, Inc.",Financials,Financial Exchanges & Data,"New York City, New York",2008-10-22,0001120193,1971
-332,https://www.nasdaq.com/market-activity/stocks/ntap,NTAP,NetApp,Information Technology,"Technology Hardware, Storage & Peripherals","San Jose, California",1999-06-25,0001002047,1992
-333,https://www.nasdaq.com/market-activity/stocks/nflx,NFLX,Netflix,Communication Services,Movies & Entertainment,"Los Gatos, California",2010-12-20,0001065280,1997
-334,https://www.nyse.com/quote/XNYS:NEM,NEM,Newmont,Materials,Gold,"Denver, Colorado",1969-06-30,0001164727,1921
-335,https://www.nasdaq.com/market-activity/stocks/nwsa,NWSA,News Corp (Class A),Communication Services,Publishing,"New York City, New York",2013-08-01,0001564708,2013 (News Corporation 1980)
-337,https://www.nyse.com/quote/XNYS:NEE,NEE,NextEra Energy,Utilities,Multi-Utilities,"Juno Beach, Florida",1976-06-30,0000753308,1984 (1925)
-338,https://www.nyse.com/quote/XNYS:NKE,NKE,"Nike, Inc.",Consumer Discretionary,"Apparel, Accessories & Luxury Goods","Washington County, Oregon",1988-11-30,0000320187,1964
-339,https://www.nyse.com/quote/XNYS:NI,NI,NiSource,Utilities,Multi-Utilities,"Merrillville, Indiana",2000-11-02,0001111711,1912
-340,https://www.nasdaq.com/market-activity/stocks/ndsn,NDSN,Nordson Corporation,Industrials,Industrial Machinery & Supplies & Components,"Westlake, Ohio",2022-02-15,0000072331,1935
-341,https://www.nyse.com/quote/XNYS:NSC,NSC,Norfolk Southern,Industrials,Rail Transportation,"Atlanta, Georgia",1957-03-04,0000702165,1881/1894 (1980)
-342,https://www.nasdaq.com/market-activity/stocks/ntrs,NTRS,Northern Trust,Financials,Asset Management & Custody Banks,"Chicago, Illinois",1998-01-30,0000073124,1889
-343,https://www.nyse.com/quote/XNYS:NOC,NOC,Northrop Grumman,Industrials,Aerospace & Defense,"West Falls Church, Virginia",1957-03-04,0001133421,"1994 (Northrop 1939, Grumman 1930)"
-344,https://www.nyse.com/quote/XNYS:NCLH,NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines","Miami, Florida",2017-10-13,0001513761,2011 (1966)
-345,https://www.nyse.com/quote/XNYS:NRG,NRG,NRG Energy,Utilities,Independent Power Producers & Energy Traders,"Houston, Texas",2010-01-29,0001013871,1992
-346,https://www.nyse.com/quote/XNYS:NUE,NUE,Nucor,Materials,Steel,"Charlotte, North Carolina",1985-04-30,0000073309,1940
-347,https://www.nasdaq.com/market-activity/stocks/nvda,NVDA,Nvidia,Information Technology,Semiconductors,"Santa Clara, California",2001-11-30,0001045810,1993
-348,https://www.nyse.com/quote/XNYS:NVR,NVR,"NVR, Inc.",Consumer Discretionary,Homebuilding,"Reston, Virginia",2019-09-26,0000906163,1980
-349,https://www.nasdaq.com/market-activity/stocks/nxpi,NXPI,NXP Semiconductors,Information Technology,Semiconductors,"Eindhoven, Netherlands",2021-03-22,0001413447,1953
-350,https://www.nasdaq.com/market-activity/stocks/orly,ORLY,O’Reilly Automotive,Consumer Discretionary,Automotive Retail,"Springfield, Missouri",2009-03-27,0000898173,1957
-351,https://www.nyse.com/quote/XNYS:OXY,OXY,Occidental Petroleum,Energy,Oil & Gas Exploration & Production,"Houston, Texas",1957-03-04,0000797468,1920
-352,https://www.nasdaq.com/market-activity/stocks/odfl,ODFL,Old Dominion,Industrials,Cargo Ground Transportation,"Thomasville, North Carolina",2019-12-09,0000878927,1934
-353,https://www.nyse.com/quote/XNYS:OMC,OMC,Omnicom Group,Communication Services,Advertising,"New York City, New York",1997-12-31,0000029989,1986
-354,https://www.nasdaq.com/market-activity/stocks/on,ON,ON Semiconductor,Information Technology,Semiconductors,"Phoenix, Arizona",2022-06-21,0001097864,1999
-355,https://www.nyse.com/quote/XNYS:OKE,OKE,Oneok,Energy,Oil & Gas Storage & Transportation,"Tulsa, Oklahoma",2010-03-15,0001039684,1906
-356,https://www.nyse.com/quote/XNYS:ORCL,ORCL,Oracle Corporation,Information Technology,Application Software,"Austin, Texas",1989-08-31,0001341439,1977
-357,https://www.nyse.com/quote/XNYS:OTIS,OTIS,Otis Worldwide,Industrials,Industrial Machinery & Supplies & Components,"Farmington, Connecticut",2020-04-03,0001781335,"2020 (1853, United Technologies spinoff)"
-358,https://www.nasdaq.com/market-activity/stocks/pcar,PCAR,Paccar,Industrials,Construction Machinery & Heavy Transportation Equipment,"Bellevue, Washington",1980-12-31,0000075362,1905
-359,https://www.nyse.com/quote/XNYS:PKG,PKG,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials,"Lake Forest, Illinois",2017-07-26,0000075677,1959
-360,https://www.nasdaq.com/market-activity/stocks/pltr,PLTR,Palantir Technologies,Information Technology,Application Software,"Denver, Colorado",2024-09-23,0001321655,2003
-361,https://www.nasdaq.com/market-activity/stocks/panw,PANW,Palo Alto Networks,Information Technology,Systems Software,"Santa Clara, California",2023-06-20,0001327567,2005
-362,https://www.nasdaq.com/market-activity/stocks/psky,PSKY,Paramount Skydance Corporation,Communication Services,Movies & Entertainment,"Los Angeles, California",1994-09-30,0002041610,2025 (Paramount Pictures 1912)
-363,https://www.nyse.com/quote/XNYS:PH,PH,Parker Hannifin,Industrials,Industrial Machinery & Supplies & Components,"Cleveland, Ohio",1985-11-30,0000076334,1917
-364,https://www.nasdaq.com/market-activity/stocks/payx,PAYX,Paychex,Industrials,Human Resource & Employment Services,"Penfield, New York",1998-10-01,0000723531,1971
-365,https://www.nyse.com/quote/XNYS:PAYC,PAYC,Paycom,Industrials,Human Resource & Employment Services,"Oklahoma City, Oklahoma",2020-01-28,0001590955,1998
-366,https://www.nasdaq.com/market-activity/stocks/pypl,PYPL,PayPal,Financials,Transaction & Payment Processing Services,"San Jose, California",2015-07-20,0001633917,1998
-367,https://www.nyse.com/quote/XNYS:PNR,PNR,Pentair,Industrials,Industrial Machinery & Supplies & Components,"Worsley, United Kingdom",2012-10-01,0000077360,1966
-368,https://www.nasdaq.com/market-activity/stocks/pep,PEP,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,"Purchase, New York",1957-03-04,0000077476,1898
-369,https://www.nyse.com/quote/XNYS:PFE,PFE,Pfizer,Health Care,Pharmaceuticals,"New York City, New York",1957-03-04,0000078003,1849
-370,https://www.nyse.com/quote/XNYS:PCG,PCG,PG&E Corporation,Utilities,Multi-Utilities,"Oakland, California",2022-10-03,0001004980,1905
-371,https://www.nyse.com/quote/XNYS:PM,PM,Philip Morris International,Consumer Staples,Tobacco,"New York City, New York",2008-03-31,0001413329,2008 (1847)
-372,https://www.nyse.com/quote/XNYS:PSX,PSX,Phillips 66,Energy,Oil & Gas Refining & Marketing,"Houston, Texas",2012-05-01,0001534701,2012 (1917)
-373,https://www.nyse.com/quote/XNYS:PNW,PNW,Pinnacle West Capital,Utilities,Multi-Utilities,"Phoenix, Arizona",1999-10-04,0000764622,1985
-374,https://www.nyse.com/quote/XNYS:PNC,PNC,PNC Financial Services,Financials,Diversified Banks,"Pittsburgh, Pennsylvania",1988-04-30,0000713676,1845
-375,https://www.nasdaq.com/market-activity/stocks/pool,POOL,Pool Corporation,Consumer Discretionary,Distributors,"Covington, Louisiana",2020-10-07,0000945841,1993
-376,https://www.nyse.com/quote/XNYS:PPG,PPG,PPG Industries,Materials,Specialty Chemicals,"Pittsburgh, Pennsylvania",1957-03-04,0000079879,1883
-377,https://www.nyse.com/quote/XNYS:PPL,PPL,PPL Corporation,Utilities,Electric Utilities,"Allentown, Pennsylvania",2001-10-01,0000922224,1920
-378,https://www.nasdaq.com/market-activity/stocks/pfg,PFG,Principal Financial Group,Financials,Life & Health Insurance,"Des Moines, Iowa",2002-07-22,0001126328,1879
-379,https://www.nyse.com/quote/XNYS:PG,PG,Procter & Gamble,Consumer Staples,Personal Care Products,"Cincinnati, Ohio",1957-03-04,0000080424,1837
-380,https://www.nyse.com/quote/XNYS:PGR,PGR,Progressive Corporation,Financials,Property & Casualty Insurance,"Mayfield Village, Ohio",1997-08-04,0000080661,1937
-381,https://www.nyse.com/quote/XNYS:PLD,PLD,Prologis,Real Estate,Industrial REITs,"San Francisco, California",2003-07-17,0001045609,1983
-382,https://www.nyse.com/quote/XNYS:PRU,PRU,Prudential Financial,Financials,Life & Health Insurance,"Newark, New Jersey",2002-07-22,0001137774,1875
-383,https://www.nyse.com/quote/XNYS:PEG,PEG,Public Service Enterprise Group,Utilities,Electric Utilities,"Newark, New Jersey",1957-03-04,0000788784,1903
-384,https://www.nasdaq.com/market-activity/stocks/ptc,PTC,PTC Inc.,Information Technology,Application Software,"Boston, Massachusetts",2021-04-20,0000857005,1985
-385,https://www.nyse.com/quote/XNYS:PSA,PSA,Public Storage,Real Estate,Self-Storage REITs,"Glendale, California",2005-08-19,0001393311,1972
-386,https://www.nyse.com/quote/XNYS:PHM,PHM,PulteGroup,Consumer Discretionary,Homebuilding,"Atlanta, Georgia",1984-04-30,0000822416,1956
-387,https://www.nyse.com/quote/XNYS:PWR,PWR,Quanta Services,Industrials,Construction & Engineering,"Houston, Texas",2009-07-01,0001050915,1997
-388,https://www.nasdaq.com/market-activity/stocks/qcom,QCOM,Qualcomm,Information Technology,Semiconductors,"San Diego, California",1999-07-22,0000804328,1985
-389,https://www.nyse.com/quote/XNYS:DGX,DGX,Quest Diagnostics,Health Care,Health Care Services,"Secaucus, New Jersey",2002-12-12,0001022079,1967
-390,https://www.nyse.com/quote/XNYS:RL,RL,Ralph Lauren Corporation,Consumer Discretionary,"Apparel, Accessories & Luxury Goods","New York City, New York",2007-02-02,0001037038,1967
-391,https://www.nyse.com/quote/XNYS:RJF,RJF,Raymond James Financial,Financials,Investment Banking & Brokerage,"St. Petersburg, Florida",2017-03-20,0000720005,1962
-392,https://www.nyse.com/quote/XNYS:RTX,RTX,RTX Corporation,Industrials,Aerospace & Defense,"Waltham, Massachusetts",1957-03-04,0000101829,1922
-393,https://www.nyse.com/quote/XNYS:O,O,Realty Income,Real Estate,Retail REITs,"San Diego, California",2015-04-07,0000726728,1969
-394,https://www.nasdaq.com/market-activity/stocks/reg,REG,Regency Centers,Real Estate,Retail REITs,"Jacksonville, Florida",2017-03-02,0000910606,1963
-395,https://www.nasdaq.com/market-activity/stocks/regn,REGN,Regeneron Pharmaceuticals,Health Care,Biotechnology,"Tarrytown, New York",2013-05-01,0000872589,1988
-396,https://www.nyse.com/quote/XNYS:RF,RF,Regions Financial Corporation,Financials,Regional Banks,"Birmingham, Alabama",1998-08-28,0001281761,1971
-397,https://www.nyse.com/quote/XNYS:RSG,RSG,Republic Services,Industrials,Environmental & Facilities Services,"Phoenix, Arizona",2008-12-05,0001060391,1998 (1981)
-398,https://www.nyse.com/quote/XNYS:RMD,RMD,ResMed,Health Care,Health Care Equipment,"San Diego, California",2017-07-26,0000943819,1989
-399,https://www.nyse.com/quote/XNYS:RVTY,RVTY,Revvity,Health Care,Health Care Equipment,"Waltham, Massachusetts",1985-05-31,0000031791,1937
+299,https://www.nasdaq.com/market-activity/stocks/mar,MAR,Marriott International,Consumer Discretionary,"Hotels, Resorts & Cruise Lines","Bethesda, Maryland",1998-05-29,0001048286,1927
+300,https://www.nyse.com/quote/XNYS:MMC,MMC,Marsh McLennan,Financials,Insurance Brokers,"New York City, New York",1987-08-31,0000062709,1905
+301,https://www.nyse.com/quote/XNYS:MLM,MLM,Martin Marietta Materials,Materials,Construction Materials,"Raleigh, North Carolina",2014-07-02,0000916076,1993
+302,https://www.nyse.com/quote/XNYS:MAS,MAS,Masco,Industrials,Building Products,"Livonia, Michigan",1981-06-30,0000062996,1929
+303,https://www.nyse.com/quote/XNYS:MA,MA,Mastercard,Financials,Transaction & Payment Processing Services,"Harrison, New York",2008-07-18,0001141391,1966
+304,https://www.nasdaq.com/market-activity/stocks/mtch,MTCH,Match Group,Communication Services,Interactive Media & Services,"Dallas, Texas",2021-09-20,0000891103,1986
+305,https://www.nyse.com/quote/XNYS:MKC,MKC,McCormick & Company,Consumer Staples,Packaged Foods & Meats,"Hunt Valley, Maryland",2003-03-20,0000063754,1889
+306,https://www.nyse.com/quote/XNYS:MCD,MCD,McDonald's,Consumer Discretionary,Restaurants,"Chicago, Illinois",1970-06-30,0000063908,1940
+307,https://www.nyse.com/quote/XNYS:MCK,MCK,McKesson Corporation,Health Care,Health Care Distributors,"Irving, Texas",1999-01-13,0000927653,1833
+308,https://www.nyse.com/quote/XNYS:MDT,MDT,Medtronic,Health Care,Health Care Equipment,"Dublin, Ireland",1986-10-31,0001613103,1949
+309,https://www.nyse.com/quote/XNYS:MRK,MRK,Merck & Co.,Health Care,Pharmaceuticals,"Kenilworth, New Jersey",1957-03-04,0000310158,1891
+310,https://www.nasdaq.com/market-activity/stocks/meta,META,Meta Platforms,Communication Services,Interactive Media & Services,"Menlo Park, California",2013-12-23,0001326801,2004
+311,https://www.nyse.com/quote/XNYS:MET,MET,MetLife,Financials,Life & Health Insurance,"New York City, New York",2000-12-11,0001099219,1868
+312,https://www.nyse.com/quote/XNYS:MTD,MTD,Mettler Toledo,Health Care,Life Sciences Tools & Services,"Columbus, Ohio",2016-09-06,0001037646,1945
+313,https://www.nyse.com/quote/XNYS:MGM,MGM,MGM Resorts,Consumer Discretionary,Casinos & Gaming,"Paradise, Nevada",2017-07-26,0000789570,1986
+314,https://www.nasdaq.com/market-activity/stocks/mchp,MCHP,Microchip Technology,Information Technology,Semiconductors,"Chandler, Arizona",2007-09-07,0000827054,1989
+315,https://www.nasdaq.com/market-activity/stocks/mu,MU,Micron Technology,Information Technology,Semiconductors,"Boise, Idaho",1994-09-27,0000723125,1978
+316,https://www.nasdaq.com/market-activity/stocks/msft,MSFT,Microsoft,Information Technology,Systems Software,"Redmond, Washington",1994-06-01,0000789019,1975
+317,https://www.nyse.com/quote/XNYS:MAA,MAA,Mid-America Apartment Communities,Real Estate,Multi-Family Residential REITs,"Memphis, Tennessee",2016-12-02,0000912595,1977
+318,https://www.nasdaq.com/market-activity/stocks/mrna,MRNA,Moderna,Health Care,Biotechnology,"Cambridge, Massachusetts",2021-07-21,0001682852,2010
+319,https://www.nyse.com/quote/XNYS:MHK,MHK,Mohawk Industries,Consumer Discretionary,Home Furnishings,"Calhoun, Georgia",2013-12-23,0000851968,1878
+320,https://www.nyse.com/quote/XNYS:MOH,MOH,Molina Healthcare,Health Care,Managed Health Care,"Long Beach, California",2022-03-02,0001179929,1980
+321,https://www.nyse.com/quote/XNYS:TAP,TAP,Molson Coors Beverage Company,Consumer Staples,Brewers,"Chicago, Illinois",1976-06-30,0000024545,"2005 (Molson 1786, Coors 1873)"
+322,https://www.nasdaq.com/market-activity/stocks/mdlz,MDLZ,Mondelez International,Consumer Staples,Packaged Foods & Meats,"Chicago, Illinois",2012-10-02,0001103982,2012
+323,https://www.nasdaq.com/market-activity/stocks/mpwr,MPWR,Monolithic Power Systems,Information Technology,Semiconductors,"Kirkland, Washington",2021-02-12,0001280452,1997
+324,https://www.nasdaq.com/market-activity/stocks/mnst,MNST,Monster Beverage,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,"Corona, California",2012-06-28,0000865752,2012 (1935)
+325,https://www.nyse.com/quote/XNYS:MCO,MCO,Moody's Corporation,Financials,Financial Exchanges & Data,"New York City, New York",1998-07-01,0001059556,1909
+326,https://www.nyse.com/quote/XNYS:MS,MS,Morgan Stanley,Financials,Investment Banking & Brokerage,"New York City, New York",1993-07-29,0000895421,1935
+327,https://www.nyse.com/quote/XNYS:MOS,MOS,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals,"Tampa, Florida",2011-09-26,0001285785,2004 (1865 / 1909)
+328,https://www.nyse.com/quote/XNYS:MSI,MSI,Motorola Solutions,Information Technology,Communications Equipment,"Chicago, Illinois",1957-03-04,0000068505,1928 (2011)
+329,https://www.nyse.com/quote/XNYS:MSCI,MSCI,MSCI Inc.,Financials,Financial Exchanges & Data,"New York City, New York",2018-04-04,0001408198,1969
+330,https://www.nasdaq.com/market-activity/stocks/ndaq,NDAQ,"Nasdaq, Inc.",Financials,Financial Exchanges & Data,"New York City, New York",2008-10-22,0001120193,1971
+331,https://www.nasdaq.com/market-activity/stocks/ntap,NTAP,NetApp,Information Technology,"Technology Hardware, Storage & Peripherals","San Jose, California",1999-06-25,0001002047,1992
+332,https://www.nasdaq.com/market-activity/stocks/nflx,NFLX,Netflix,Communication Services,Movies & Entertainment,"Los Gatos, California",2010-12-20,0001065280,1997
+333,https://www.nyse.com/quote/XNYS:NEM,NEM,Newmont,Materials,Gold,"Denver, Colorado",1969-06-30,0001164727,1921
+334,https://www.nasdaq.com/market-activity/stocks/nwsa,NWSA,News Corp (Class A),Communication Services,Publishing,"New York City, New York",2013-08-01,0001564708,2013 (News Corporation 1980)
+336,https://www.nyse.com/quote/XNYS:NEE,NEE,NextEra Energy,Utilities,Multi-Utilities,"Juno Beach, Florida",1976-06-30,0000753308,1984 (1925)
+337,https://www.nyse.com/quote/XNYS:NKE,NKE,"Nike, Inc.",Consumer Discretionary,"Apparel, Accessories & Luxury Goods","Washington County, Oregon",1988-11-30,0000320187,1964
+338,https://www.nyse.com/quote/XNYS:NI,NI,NiSource,Utilities,Multi-Utilities,"Merrillville, Indiana",2000-11-02,0001111711,1912
+339,https://www.nasdaq.com/market-activity/stocks/ndsn,NDSN,Nordson Corporation,Industrials,Industrial Machinery & Supplies & Components,"Westlake, Ohio",2022-02-15,0000072331,1935
+340,https://www.nyse.com/quote/XNYS:NSC,NSC,Norfolk Southern,Industrials,Rail Transportation,"Atlanta, Georgia",1957-03-04,0000702165,1881/1894 (1980)
+341,https://www.nasdaq.com/market-activity/stocks/ntrs,NTRS,Northern Trust,Financials,Asset Management & Custody Banks,"Chicago, Illinois",1998-01-30,0000073124,1889
+342,https://www.nyse.com/quote/XNYS:NOC,NOC,Northrop Grumman,Industrials,Aerospace & Defense,"West Falls Church, Virginia",1957-03-04,0001133421,"1994 (Northrop 1939, Grumman 1930)"
+343,https://www.nyse.com/quote/XNYS:NCLH,NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines","Miami, Florida",2017-10-13,0001513761,2011 (1966)
+344,https://www.nyse.com/quote/XNYS:NRG,NRG,NRG Energy,Utilities,Independent Power Producers & Energy Traders,"Houston, Texas",2010-01-29,0001013871,1992
+345,https://www.nyse.com/quote/XNYS:NUE,NUE,Nucor,Materials,Steel,"Charlotte, North Carolina",1985-04-30,0000073309,1940
+346,https://www.nasdaq.com/market-activity/stocks/nvda,NVDA,Nvidia,Information Technology,Semiconductors,"Santa Clara, California",2001-11-30,0001045810,1993
+347,https://www.nyse.com/quote/XNYS:NVR,NVR,"NVR, Inc.",Consumer Discretionary,Homebuilding,"Reston, Virginia",2019-09-26,0000906163,1980
+348,https://www.nasdaq.com/market-activity/stocks/nxpi,NXPI,NXP Semiconductors,Information Technology,Semiconductors,"Eindhoven, Netherlands",2021-03-22,0001413447,1953
+349,https://www.nasdaq.com/market-activity/stocks/orly,ORLY,O’Reilly Automotive,Consumer Discretionary,Automotive Retail,"Springfield, Missouri",2009-03-27,0000898173,1957
+350,https://www.nyse.com/quote/XNYS:OXY,OXY,Occidental Petroleum,Energy,Oil & Gas Exploration & Production,"Houston, Texas",1957-03-04,0000797468,1920
+351,https://www.nasdaq.com/market-activity/stocks/odfl,ODFL,Old Dominion,Industrials,Cargo Ground Transportation,"Thomasville, North Carolina",2019-12-09,0000878927,1934
+352,https://www.nyse.com/quote/XNYS:OMC,OMC,Omnicom Group,Communication Services,Advertising,"New York City, New York",1997-12-31,0000029989,1986
+353,https://www.nasdaq.com/market-activity/stocks/on,ON,ON Semiconductor,Information Technology,Semiconductors,"Phoenix, Arizona",2022-06-21,0001097864,1999
+354,https://www.nyse.com/quote/XNYS:OKE,OKE,Oneok,Energy,Oil & Gas Storage & Transportation,"Tulsa, Oklahoma",2010-03-15,0001039684,1906
+355,https://www.nyse.com/quote/XNYS:ORCL,ORCL,Oracle Corporation,Information Technology,Application Software,"Austin, Texas",1989-08-31,0001341439,1977
+356,https://www.nyse.com/quote/XNYS:OTIS,OTIS,Otis Worldwide,Industrials,Industrial Machinery & Supplies & Components,"Farmington, Connecticut",2020-04-03,0001781335,"2020 (1853, United Technologies spinoff)"
+357,https://www.nasdaq.com/market-activity/stocks/pcar,PCAR,Paccar,Industrials,Construction Machinery & Heavy Transportation Equipment,"Bellevue, Washington",1980-12-31,0000075362,1905
+358,https://www.nyse.com/quote/XNYS:PKG,PKG,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials,"Lake Forest, Illinois",2017-07-26,0000075677,1959
+359,https://www.nasdaq.com/market-activity/stocks/pltr,PLTR,Palantir Technologies,Information Technology,Application Software,"Denver, Colorado",2024-09-23,0001321655,2003
+360,https://www.nasdaq.com/market-activity/stocks/panw,PANW,Palo Alto Networks,Information Technology,Systems Software,"Santa Clara, California",2023-06-20,0001327567,2005
+361,https://www.nasdaq.com/market-activity/stocks/psky,PSKY,Paramount Skydance Corporation,Communication Services,Movies & Entertainment,"Los Angeles, California",1994-09-30,0002041610,2025 (Paramount Pictures 1912)
+362,https://www.nyse.com/quote/XNYS:PH,PH,Parker Hannifin,Industrials,Industrial Machinery & Supplies & Components,"Cleveland, Ohio",1985-11-30,0000076334,1917
+363,https://www.nasdaq.com/market-activity/stocks/payx,PAYX,Paychex,Industrials,Human Resource & Employment Services,"Penfield, New York",1998-10-01,0000723531,1971
+364,https://www.nyse.com/quote/XNYS:PAYC,PAYC,Paycom,Industrials,Human Resource & Employment Services,"Oklahoma City, Oklahoma",2020-01-28,0001590955,1998
+365,https://www.nasdaq.com/market-activity/stocks/pypl,PYPL,PayPal,Financials,Transaction & Payment Processing Services,"San Jose, California",2015-07-20,0001633917,1998
+366,https://www.nyse.com/quote/XNYS:PNR,PNR,Pentair,Industrials,Industrial Machinery & Supplies & Components,"Worsley, United Kingdom",2012-10-01,0000077360,1966
+367,https://www.nasdaq.com/market-activity/stocks/pep,PEP,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,"Purchase, New York",1957-03-04,0000077476,1898
+368,https://www.nyse.com/quote/XNYS:PFE,PFE,Pfizer,Health Care,Pharmaceuticals,"New York City, New York",1957-03-04,0000078003,1849
+369,https://www.nyse.com/quote/XNYS:PCG,PCG,PG&E Corporation,Utilities,Multi-Utilities,"Oakland, California",2022-10-03,0001004980,1905
+370,https://www.nyse.com/quote/XNYS:PM,PM,Philip Morris International,Consumer Staples,Tobacco,"New York City, New York",2008-03-31,0001413329,2008 (1847)
+371,https://www.nyse.com/quote/XNYS:PSX,PSX,Phillips 66,Energy,Oil & Gas Refining & Marketing,"Houston, Texas",2012-05-01,0001534701,2012 (1917)
+372,https://www.nyse.com/quote/XNYS:PNW,PNW,Pinnacle West Capital,Utilities,Multi-Utilities,"Phoenix, Arizona",1999-10-04,0000764622,1985
+373,https://www.nyse.com/quote/XNYS:PNC,PNC,PNC Financial Services,Financials,Diversified Banks,"Pittsburgh, Pennsylvania",1988-04-30,0000713676,1845
+374,https://www.nasdaq.com/market-activity/stocks/pool,POOL,Pool Corporation,Consumer Discretionary,Distributors,"Covington, Louisiana",2020-10-07,0000945841,1993
+375,https://www.nyse.com/quote/XNYS:PPG,PPG,PPG Industries,Materials,Specialty Chemicals,"Pittsburgh, Pennsylvania",1957-03-04,0000079879,1883
+376,https://www.nyse.com/quote/XNYS:PPL,PPL,PPL Corporation,Utilities,Electric Utilities,"Allentown, Pennsylvania",2001-10-01,0000922224,1920
+377,https://www.nasdaq.com/market-activity/stocks/pfg,PFG,Principal Financial Group,Financials,Life & Health Insurance,"Des Moines, Iowa",2002-07-22,0001126328,1879
+378,https://www.nyse.com/quote/XNYS:PG,PG,Procter & Gamble,Consumer Staples,Personal Care Products,"Cincinnati, Ohio",1957-03-04,0000080424,1837
+379,https://www.nyse.com/quote/XNYS:PGR,PGR,Progressive Corporation,Financials,Property & Casualty Insurance,"Mayfield Village, Ohio",1997-08-04,0000080661,1937
+380,https://www.nyse.com/quote/XNYS:PLD,PLD,Prologis,Real Estate,Industrial REITs,"San Francisco, California",2003-07-17,0001045609,1983
+381,https://www.nyse.com/quote/XNYS:PRU,PRU,Prudential Financial,Financials,Life & Health Insurance,"Newark, New Jersey",2002-07-22,0001137774,1875
+382,https://www.nyse.com/quote/XNYS:PEG,PEG,Public Service Enterprise Group,Utilities,Electric Utilities,"Newark, New Jersey",1957-03-04,0000788784,1903
+383,https://www.nasdaq.com/market-activity/stocks/ptc,PTC,PTC Inc.,Information Technology,Application Software,"Boston, Massachusetts",2021-04-20,0000857005,1985
+384,https://www.nyse.com/quote/XNYS:PSA,PSA,Public Storage,Real Estate,Self-Storage REITs,"Glendale, California",2005-08-19,0001393311,1972
+385,https://www.nyse.com/quote/XNYS:PHM,PHM,PulteGroup,Consumer Discretionary,Homebuilding,"Atlanta, Georgia",1984-04-30,0000822416,1956
+386,https://www.nyse.com/quote/XNYS:PWR,PWR,Quanta Services,Industrials,Construction & Engineering,"Houston, Texas",2009-07-01,0001050915,1997
+387,https://www.nasdaq.com/market-activity/stocks/qcom,QCOM,Qualcomm,Information Technology,Semiconductors,"San Diego, California",1999-07-22,0000804328,1985
+388,https://www.nyse.com/quote/XNYS:DGX,DGX,Quest Diagnostics,Health Care,Health Care Services,"Secaucus, New Jersey",2002-12-12,0001022079,1967
+389,https://www.nyse.com/quote/XNYS:RL,RL,Ralph Lauren Corporation,Consumer Discretionary,"Apparel, Accessories & Luxury Goods","New York City, New York",2007-02-02,0001037038,1967
+390,https://www.nyse.com/quote/XNYS:RJF,RJF,Raymond James Financial,Financials,Investment Banking & Brokerage,"St. Petersburg, Florida",2017-03-20,0000720005,1962
+391,https://www.nyse.com/quote/XNYS:RTX,RTX,RTX Corporation,Industrials,Aerospace & Defense,"Waltham, Massachusetts",1957-03-04,0000101829,1922
+392,https://www.nyse.com/quote/XNYS:O,O,Realty Income,Real Estate,Retail REITs,"San Diego, California",2015-04-07,0000726728,1969
+393,https://www.nasdaq.com/market-activity/stocks/reg,REG,Regency Centers,Real Estate,Retail REITs,"Jacksonville, Florida",2017-03-02,0000910606,1963
+394,https://www.nasdaq.com/market-activity/stocks/regn,REGN,Regeneron Pharmaceuticals,Health Care,Biotechnology,"Tarrytown, New York",2013-05-01,0000872589,1988
+395,https://www.nyse.com/quote/XNYS:RF,RF,Regions Financial Corporation,Financials,Regional Banks,"Birmingham, Alabama",1998-08-28,0001281761,1971
+396,https://www.nyse.com/quote/XNYS:RSG,RSG,Republic Services,Industrials,Environmental & Facilities Services,"Phoenix, Arizona",2008-12-05,0001060391,1998 (1981)
+397,https://www.nyse.com/quote/XNYS:RMD,RMD,ResMed,Health Care,Health Care Equipment,"San Diego, California",2017-07-26,0000943819,1989
+398,https://www.nyse.com/quote/XNYS:RVTY,RVTY,Revvity,Health Care,Health Care Equipment,"Waltham, Massachusetts",1985-05-31,0000031791,1937
+399,https://www.nasdaq.com/market-activity/stocks/hood,HOOD,Robinhood Markets,Financials,Investment Banking & Brokerage,"Menlo Park, California",2025-09-22,0001783879,2013
 400,https://www.nyse.com/quote/XNYS:ROK,ROK,Rockwell Automation,Industrials,Electrical Components & Equipment,"Milwaukee, Wisconsin",2000-03-12,0001024478,1903
 401,https://www.nyse.com/quote/XNYS:ROL,ROL,"Rollins, Inc.",Industrials,Environmental & Facilities Services,"Atlanta, Georgia",2018-10-01,0000084839,1948
 402,https://www.nasdaq.com/market-activity/stocks/rop,ROP,Roper Technologies,Information Technology,Electronic Equipment & Instruments,"Sarasota, Florida",2009-12-23,0000882835,1981
@@ -460,12 +460,12 @@
 461,https://www.nasdaq.com/market-activity/stocks/ual,UAL,United Airlines Holdings,Industrials,Passenger Airlines,"Chicago, Illinois",2015-09-03,0000100517,1967
 462,https://www.nyse.com/quote/XNYS:UPS,UPS,United Parcel Service,Industrials,Air Freight & Logistics,"Sandy Springs, Georgia",2002-07-22,0001090727,1907
 463,https://www.nyse.com/quote/XNYS:URI,URI,United Rentals,Industrials,Trading Companies & Distributors,"Stamford, Connecticut",2014-09-20,0001067701,1997
-464,https://www.nyse.com/quote/XNYS:UNH,UNH,UnitedHealth Group,Health Care,Managed Health Care,"Minnetonka, Minnesota",1994-07-01,0000731766,1977
+464,https://www.nyse.com/quote/XNYS:UNH,UNH,UnitedHealth Group,Health Care,Managed Health Care,"Eden Prairie, Minnesota",1994-07-01,0000731766,1977
 465,https://www.nyse.com/quote/XNYS:UHS,UHS,Universal Health Services,Health Care,Health Care Facilities,"King of Prussia, Pennsylvania",2014-09-20,0000352915,1979
 466,https://www.nyse.com/quote/XNYS:VLO,VLO,Valero Energy,Energy,Oil & Gas Refining & Marketing,"San Antonio, Texas",2002-12-20,0001035002,1980
 467,https://www.nyse.com/quote/XNYS:VTR,VTR,Ventas,Real Estate,Health Care REITs,"Chicago, Illinois",2009-03-04,0000740260,1998
 468,https://www.nyse.com/quote/XNYS:VLTO,VLTO,Veralto,Industrials,Environmental & Facilities Services,"Waltham, Massachusetts",2023-10-02,0001967680,2023
-469,https://www.nasdaq.com/market-activity/stocks/vrsn,VRSN,Verisign,Information Technology,Internet Services & Infrastructure,"Dulles, Virginia",2006-02-01,0001014473,1995
+469,https://www.nasdaq.com/market-activity/stocks/vrsn,VRSN,Verisign,Information Technology,Internet Services & Infrastructure,"Reston, Virginia",2006-02-01,0001014473,1995
 470,https://www.nasdaq.com/market-activity/stocks/vrsk,VRSK,Verisk Analytics,Industrials,Research & Consulting Services,"Jersey City, New Jersey",2015-10-08,0001442145,1971
 471,https://www.nyse.com/quote/XNYS:VZ,VZ,Verizon,Communication Services,Integrated Telecommunication Services,"New York City, New York",1983-11-30,0000732712,1983 (1877)
 472,https://www.nasdaq.com/market-activity/stocks/vrtx,VRTX,Vertex Pharmaceuticals,Health Care,Biotechnology,"Boston, Massachusetts",2013-09-23,0000875320,1989
