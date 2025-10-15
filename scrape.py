@@ -99,7 +99,7 @@ def get_nyse_ytd(driver, url, symbol, year_start='01-02-2025'): # not correct da
         data['close'].append(today_close)
         data['volume'].append(today_volume)
 
-        for row in temp[1:]:
+        for row in temp:
             data['symbol'].append(symbol)
             data['date'].append(row[0].replace('/', '-'))
             data['open'].append(float(row[1]))
