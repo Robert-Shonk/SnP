@@ -1,5 +1,7 @@
 import sqlite3
 
+import numpy as np
+
 
 def init_db():
     create_snp_table()
@@ -67,4 +69,25 @@ def insert_new_snp(new_snp):
 
 
 def insert_stocks(stocks):
-    pass
+    con = sqlite3.connect('data/database/snp.db')
+    cur = con.cursor()
+
+    data = []
+
+    for i, row in stocks.iterrows():
+        d = []
+        for c in row:
+            if type(c) == np.int64:
+                d.append(int(c))
+            elif type(c) == np.float64:
+                d.append(float(c))
+            else:
+                d.append(c)
+                
+        data.append(d[1:])
+
+    cur.executemany('INSERT INTO stock (symbol, date, open, high, low, close, volume) VALUES (?, ?, ?, ?, ?, ?, ?)', data)
+    con.commit()
+
+    con.close()
+    print('YTD stock data added.')
