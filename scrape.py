@@ -135,7 +135,7 @@ def get_yahoo_ytd(driver, symbol, year_start='Jan-2-2025'):
             temp.append(row.split(' '))
 
     for row in temp:
-        data['symbol'].append(symbol)
+        data['symbol'].append(symbol.replace('-', '.'))
         data['date'].append(f'{row[0]}-{row[1].replace(',', '')}-{row[2]}')
         data['open'].append(float(row[3]))
         data['high'].append(float(row[4]))
