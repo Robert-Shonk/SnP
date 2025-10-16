@@ -54,7 +54,7 @@ def get_list():
         return -1
     
 
-def get_nyse_ytd(driver, url, symbol, year_start='01-02-2025'): # not correct date format for nyse
+def get_nyse_ytd(driver, url, symbol, year_start='01-02-2025'):
     driver.get(url)
 
     wait = WebDriverWait(driver, timeout=5)
@@ -81,7 +81,16 @@ def get_nyse_ytd(driver, url, symbol, year_start='01-02-2025'): # not correct da
     if today_date == temp[0][0].replace('/', '-'):
         for row in temp:
             data['symbol'].append(symbol)
-            data['date'].append(row[0].replace('/', '-'))
+            
+            # put nyse in YYYY-MM-DD format for sqlite
+            date = row[0].replace('/', '-')
+            date = date.split('-')
+            d = [0, 0, 0]
+            d[0] = date[2]
+            d[1] = date[0]
+            d[2] = date[1]
+            data['date'].append('-'.join(d))
+
             data['open'].append(float(row[1]))
             data['high'].append(float(row[2]))
             data['low'].append(float(row[3]))
@@ -92,7 +101,14 @@ def get_nyse_ytd(driver, url, symbol, year_start='01-02-2025'): # not correct da
                 break
     else:
         data['symbol'].append(symbol)
-        data['date'].append(today_date)
+        # put nyse in YYYY-MM-DD format for sqlite
+        date = today_date
+        date = date.split('-')
+        d = [0, 0, 0]
+        d[0] = date[2]
+        d[1] = date[0]
+        d[2] = date[1]
+        data['date'].append('-'.join(d))
         data['open'].append(today_open)
         data['high'].append(today_high)
         data['low'].append(today_low)
@@ -101,7 +117,16 @@ def get_nyse_ytd(driver, url, symbol, year_start='01-02-2025'): # not correct da
 
         for row in temp:
             data['symbol'].append(symbol)
-            data['date'].append(row[0].replace('/', '-'))
+            
+            # put nyse in YYYY-MM-DD format for sqlite
+            date = row[0].replace('/', '-')
+            date = date.split('-')
+            d = [0, 0, 0]
+            d[0] = date[2]
+            d[1] = date[0]
+            d[2] = date[1]
+            data['date'].append('-'.join(d))
+            
             data['open'].append(float(row[1]))
             data['high'].append(float(row[2]))
             data['low'].append(float(row[3]))
@@ -136,7 +161,10 @@ def get_yahoo_ytd(driver, symbol, year_start='Jan-2-2025'):
 
     for row in temp:
         data['symbol'].append(symbol.replace('-', '.'))
-        data['date'].append(f'{row[0]}-{row[1].replace(',', '')}-{row[2]}')
+        if len(row[1].replace(',', '')) < 2:
+            data['date'].append(f'{row[2]}-{months[row[0]]}-0{row[1].replace(',', '')}')
+        else:
+            data['date'].append(f'{row[2]}-{months[row[0]]}-{row[1].replace(',', '')}')
         data['open'].append(float(row[3]))
         data['high'].append(float(row[4]))
         data['low'].append(float(row[5]))
