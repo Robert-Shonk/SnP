@@ -84,7 +84,7 @@ def insert_stocks(stocks):
             else:
                 d.append(c)
                 
-        data.append(d[1:])
+        data.append(d)
 
     cur.executemany('INSERT INTO stock (symbol, date, open, high, low, close, volume) VALUES (?, ?, ?, ?, ?, ?, ?)', data)
     con.commit()

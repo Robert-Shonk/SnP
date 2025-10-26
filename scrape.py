@@ -1,7 +1,6 @@
 import urls
 
 import time
-import math
 
 import requests
 import pandas as pd
@@ -10,15 +9,14 @@ from bs4 import BeautifulSoup
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
 
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0'
 }
 months = {'Jan':'01', 'Feb':'02', 'Mar':'03', 'Apr':'04', 'May':'05', 'Jun':'06', 'Jul':'07', 'Aug':'08', 'Sep':'09', 'Oct':'10', 'Nov':'11', 'Dec':'12'}
+
 
 def get_list():
     data = {'exchange_url': [], 'symbol': [], 'security': [], 'sector': [], 'sub_industry': [], 'hq_location': [], 'date_added': [], 'CIK': [], 'founded': []}
@@ -54,198 +52,96 @@ def get_list():
         return -1
     
 
-def get_nyse_ytd(driver, url, symbol, year_start='01-02-2025'):
-    driver.get(url)
+def scrape_row(row, symbol):
+    data = {}
+    raw_data = row.text
+    if 'Dividend' not in raw_data and 'Splits' not in raw_data:
+        spl = raw_data.split(' ')
+        data['symbol'] = symbol.replace('-', '.')
 
-    wait = WebDriverWait(driver, timeout=5)
-    wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'flex_tr')))
-    rows = driver.find_elements(By.CLASS_NAME, 'flex_tr')
+        # format date to YYYY-MM-DD for sqlite
+        year = spl[2]
+        month = months[spl[0]]
+        day = spl[1].replace(',', '')
+        if len(day) < 2:
+            day = f'0{day}'
 
-    temp = []
-    data = {'symbol': [], 'date': [], 'open': [], 'high': [], 'low': [], 'close':[], 'volume': []}
+        data['date'] = '-'.join([year, month, day])
 
-    wait = WebDriverWait(driver, timeout=6.5)
-    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(9) > span:nth-child(2)')))
-
-    today_open = float(driver.find_element(By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(9) > span:nth-child(2)').text.replace(',', ''))
-    today_high = float(driver.find_element(By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(10) > span:nth-child(2)').text.replace(',', ''))
-    today_low = float(driver.find_element(By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(11) > span:nth-child(2)').text.replace(',', ''))
-    today_volume = int(driver.find_element(By.CSS_SELECTOR, 'div.d-dquote-datablock:nth-child(4) > span:nth-child(2)').text.replace(',', ''))
-    today_close = float(driver.find_element(By.CLASS_NAME, 'd-dquote-x3').text.replace(',', ''))
-    today_date = driver.find_element(By.CSS_SELECTOR, '.d-dquote-time > span:nth-child(2)').text.split(' ')[0].replace('/', '-')
-
-    for row in rows:
-        temp.append(row.text.replace(',', '').split('\n'))
-
-    # check if we need to get today's info separately.
-    if today_date == temp[0][0].replace('/', '-'):
-        for row in temp:
-            data['symbol'].append(symbol)
-            
-            # put nyse in YYYY-MM-DD format for sqlite
-            date = row[0].replace('/', '-')
-            date = date.split('-')
-            d = [0, 0, 0]
-            d[0] = date[2]
-            d[1] = date[0]
-            d[2] = date[1]
-            data['date'].append('-'.join(d))
-
-            data['open'].append(float(row[1]))
-            data['high'].append(float(row[2]))
-            data['low'].append(float(row[3]))
-            data['close'].append(float(row[4]))
-            data['volume'].append(int(row[5].replace(',', '')))
-
-            if row[0].replace('/', '-') == year_start:
-                break
-    else:
-        data['symbol'].append(symbol)
-        # put nyse in YYYY-MM-DD format for sqlite
-        date = today_date
-        date = date.split('-')
-        d = [0, 0, 0]
-        d[0] = date[2]
-        d[1] = date[0]
-        d[2] = date[1]
-        data['date'].append('-'.join(d))
-        data['open'].append(today_open)
-        data['high'].append(today_high)
-        data['low'].append(today_low)
-        data['close'].append(today_close)
-        data['volume'].append(today_volume)
-
-        for row in temp:
-            data['symbol'].append(symbol)
-            
-            # put nyse in YYYY-MM-DD format for sqlite
-            date = row[0].replace('/', '-')
-            date = date.split('-')
-            d = [0, 0, 0]
-            d[0] = date[2]
-            d[1] = date[0]
-            d[2] = date[1]
-            data['date'].append('-'.join(d))
-            
-            data['open'].append(float(row[1]))
-            data['high'].append(float(row[2]))
-            data['low'].append(float(row[3]))
-            data['close'].append(float(row[4]))
-            data['volume'].append(int(row[5].replace(',', '')))
-
-            if row[0].replace('/', '-') == year_start:
-                break
-
+        data['open'] = float(spl[3].replace(',', ''))
+        data['high'] = float(spl[4].replace(',', ''))
+        data['low'] = float(spl[5].replace(',', ''))
+        data['close'] = float(spl[6].replace(',', ''))
+        data['volume'] = int(spl[8].replace(',', ''))
+        
     return data
 
 
-# base url from urls.py (urls.stock_base_url)
-def get_yahoo_ytd(driver, symbol, year_start='Jan-2-2025'):
-    if '.' in symbol:
-        symbol = symbol.replace('.', '-')
-
-    url = f'{urls.stock_base_url}{symbol}/history/'
+def get_rows(driver, sym):
+    url = f'https://finance.yahoo.com/quote/{sym}/history'
     driver.get(url)
 
-    wait = WebDriverWait(driver, timeout=4)
-    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '.table > tbody:nth-child(2)')))
-
-    tbody = driver.find_element(By.CSS_SELECTOR, '.table > tbody:nth-child(2)')
-    rows = tbody.text.replace(',', '').split('\n')
-
-    temp = []
-    data = {'symbol': [], 'date': [], 'open': [], 'high': [], 'low': [], 'close':[], 'volume': []}
-    for row in rows:
-        if 'Dividend' not in row and 'Splits' not in row:
-            temp.append(row.split(' '))
-
-    for row in temp:
-        data['symbol'].append(symbol.replace('-', '.'))
-        if len(row[1].replace(',', '')) < 2:
-            data['date'].append(f'{row[2]}-{months[row[0]]}-0{row[1].replace(',', '')}')
-        else:
-            data['date'].append(f'{row[2]}-{months[row[0]]}-{row[1].replace(',', '')}')
-        data['open'].append(float(row[3]))
-        data['high'].append(float(row[4]))
-        data['low'].append(float(row[5]))
-        data['close'].append(float(row[6]))
-        data['volume'].append(int(row[8].replace(',', '')))
-
-        if f'{row[0]}-{row[1].replace(',', '')}-{row[2]}' == year_start:
-            break
-
-    return data
-
-
-# this gets all necessary data of all stocks on S&P500
-# saves 'raw' data as csv and then returns it.
-def get_ytd(frame):
-    options = webdriver.FirefoxOptions()
-    options.page_load_strategy = 'eager'
-    options.add_argument('--headless')
-    driver = webdriver.Firefox(options=options)
-
-    data = []
-    for i, row in frame.iterrows():
+    try:
+        table = driver.find_element(By.CSS_SELECTOR, '.table')
+        rows = table.find_elements(By.TAG_NAME, 'tr')[1:]
+    except NoSuchElementException:
         try:
-            if 'nyse' in row['exchange_url']:
-                data.append(get_nyse_ytd(driver, row['exchange_url'], row['symbol']))
-                print(f'{i} NYSE: {row['symbol']}')
-                #time.sleep(.5)
-            elif 'yahoo' in row['exchange_url']:
-                data.append(get_yahoo_ytd(driver, row['symbol']))
-                print(f'{i} YAHOO: {row['symbol']}')
-                time.sleep(.5)
-        except TimeoutException:
-            try:
-                time.sleep(2)
-                data.append(get_yahoo_ytd(driver, row['symbol'])) # what if this times out too...
-                print(f'{i} YAHOO: {row['symbol']}')
-            except TimeoutException:
-                print(f'Error:{i} - {row['symbol']}')
+            rows = driver.find_elements(By.TAG_NAME, 'tr')[1:]
+        except NoSuchElementException:
+            print(f'[NoSuchElementException] Symbol: {sym}. Could not find elements with data.')
 
-    print(len(data))
-    driver.quit()
-
-    df_list = [pd.DataFrame(x) for x in data]
-    theta = pd.concat(df_list)
-    theta.to_csv('data/csv/snp_YTD.csv')
-
-    return theta
+    return rows
 
 
-def split_snp(snp):
-    for i, row in snp.iterrows():
-        if 'nyse' not in row['exchange_url'] and 'nasdaq' not in row['exchange_url']:
-            snp.loc[i, 'exchange_url'] = 'yahoo'
+# returns list of dictionaries
+def get_ytd(symbols, year_start='2025-01-02'):
+    options = webdriver.ChromeOptions()
+    options.page_load_strategy = 'eager'
+    options.add_argument('--headless=new')
+    driver = webdriver.Chrome(options=options)
 
-    nyse = snp.query('exchange_url.str.contains("nyse") | exchange_url.str.contains("yahoo")').reset_index()
-    nasdaq = snp.query('exchange_url.str.contains("nasdaq")').reset_index()
+    d = []
+    count = 1
+    for sym in symbols:
+        sym = sym.replace('.', '-')
+        t0 = time.time()
 
-    for i, row in nasdaq.iterrows():
-        nasdaq.loc[i, 'exchange_url'] = 'yahoo'
-    x = 250-len(nasdaq)
+        rows = get_rows(driver, sym)
 
-    yahoo = nyse[:x]
-    nyse = nyse[x:].reset_index()
+        if len(rows) > 0:
+            for row in rows:
+                parsed = scrape_row(row, sym)
+                
+                if len(parsed) > 0:
+                    d.append(parsed)
 
-    yahoo = pd.concat([yahoo, nasdaq]).reset_index()
+                    if parsed['date'] == year_start:
+                        break
+        else:
+            print(f'[ERROR1] {sym}: elements found but returned 0 rows... Trying one more time.')
 
-    data = {'exchange_url': [], 'symbol': []}
-    count = 0
-    nyse_i = 0
-    yahoo_i = 0
+            rows = get_rows(driver, sym)
+            
+            if len(rows) > 0:
+                for row in rows:
+                    parsed = scrape_row(row, sym)
+                    
+                    if len(parsed) > 0:
+                        d.append(parsed)
 
-    while count < len(snp):
-        if count % 2 == 0 and nyse_i < len(nyse):
-                data['exchange_url'].append(nyse.loc[nyse_i, 'exchange_url'])
-                data['symbol'].append(nyse.loc[nyse_i, 'symbol'])
-                nyse_i += 1
-
-        if count % 2 == 1 and yahoo_i < len(yahoo):
-            data['exchange_url'].append('yahoo')
-            data['symbol'].append(yahoo.loc[yahoo_i, 'symbol'])
-            yahoo_i += 1
+                        if parsed['date'] == year_start:
+                            break
+            else:
+                print(f'[ERROR2] {sym}: elements found but returned 0 rows... skipping stock.')
+            
+        t1 = time.time()
+        t_total = round(t1 - t0, 2)
+        print(f'{count}. Time: {t_total}s. Stock: {sym}')
         count += 1
 
-    return data
+        if t_total < 4:
+            time.sleep(4 - t_total)
+
+    driver.quit()
+
+    return d
