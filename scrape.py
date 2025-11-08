@@ -94,7 +94,7 @@ def get_rows(driver, sym):
 
 
 # returns list of dictionaries
-def get_ytd(symbols, year_start='2025-01-02'):
+def get_ytd(symbols, year_start='2024-12-31'):
     options = webdriver.ChromeOptions()
     options.page_load_strategy = 'eager'
     options.add_argument('--headless=new')

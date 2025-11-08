@@ -6,5 +6,6 @@ CREATE TABLE stock (
     high REAL NOT NULL,
     low REAL NOT NULL,
     close REAL NOT NULL,
-    volume INTEGER NOT NULL
+    volume INTEGER NOT NULL,
+    move REAL NOT NULL
 );
