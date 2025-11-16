@@ -1,5 +1,6 @@
 urls.py
 db_nb.ipynb
+nb.ipynb
 
 data/database/snp.db
 data/csv/

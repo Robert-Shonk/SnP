@@ -46,16 +46,14 @@ def drop_table(table_names):
 
 
 def insert_new_snp(new_snp):
-    drop_table('snp')
-    create_snp_table()
-    
     con = sqlite3.connect('data/database/snp.db')
     cur = con.cursor()
+    create_snp_table(cur)
     
     data = []
 
     for i, row in new_snp.iterrows():
-        data.append(tuple(row)[1:])
+        data.append(tuple(row))
 
     cur.executemany('INSERT INTO snp (exchange_url, symbol, security, sector, sub_industry, hq_location, date_added, CIK, founded) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', data)
     con.commit()

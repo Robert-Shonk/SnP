@@ -1,5 +1,6 @@
 import urls
 
+import random
 import time
 from datetime import date, datetime, timedelta
 
@@ -25,8 +26,6 @@ def get_list():
     req = requests.get(urls.snp_list_url, headers=headers)
 
     if req.status_code == 200:
-        print('[scrape.get_list()] Request success')
-
         soup = BeautifulSoup(req.content, 'html.parser')
         snp = soup.select('#constituents')[0].find_all('tr')[1:]
 
@@ -44,10 +43,9 @@ def get_list():
             data['founded'].append(tds[7].text.strip())
 
         df = pd.DataFrame(data).drop_duplicates(subset=['CIK'], keep='first')
-        df.to_csv('data/csv/snp_list.csv')
-        print('[scrape.get_list()] S&P500 list saved to /data/csv/snp_list.csv')
+        print('S&P500 table scraped.')
         
-        return 0
+        return df
     else:
         print(f'[scrape.get_list()] Error: code {req.status_code}')
         return -1
@@ -103,11 +101,11 @@ def get_data(symbols, date_end='2024-12-31'):
     options = webdriver.ChromeOptions()
     options.page_load_strategy = 'eager'
     options.add_argument('--headless=new')
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0")
     driver = webdriver.Chrome(options=options)
 
     d = []
     count = 1
+    total_time = 0
     for sym in symbols:
         sym = sym.replace('.', '-')
         t0 = time.time()
@@ -142,16 +140,18 @@ def get_data(symbols, date_end='2024-12-31'):
                         d.append(parsed)
             else:
                 print(f'[ERROR2] {sym}: elements found but returned 0 rows... skipping stock.')
-            
+
+        time.sleep(random.randint(0, 3))
+
         t1 = time.time()
         t_total = round(t1 - t0, 2)
+        total_time += t_total
         print(f'{count}. Time: {t_total}s. Stock: {sym}')
         count += 1
 
-        if t_total < 4:
-            time.sleep(4 - t_total)
 
     driver.quit()
+    print(f"[scrape.py] Total scrape time: {total_time}")
 
     return d
 
