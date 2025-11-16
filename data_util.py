@@ -17,6 +17,6 @@ def calc_moves(symbols, stocks_df):
 
     # concat list of df into one dataframe
     con_dfs = pd.concat(df_list).reset_index()
-    con_dfs = con_dfs.drop(columns=['index', 'Unnamed: 0'])
+    con_dfs = con_dfs.drop(columns=['index'])
 
     return con_dfs

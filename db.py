@@ -4,35 +4,29 @@ import numpy as np
 
 
 def init_db():
-    create_snp_table()
-    create_stock_table()
+    con = sqlite3.connect('data/database/snp.db')
+    cur = con.cursor()
+
+    create_snp_table(cur)
+    create_stock_table(cur)
+
+    con.commit()
+    con.close()
     print('Database initialized.')
  
 
-def create_snp_table():
-    con = sqlite3.connect('data/database/snp.db')
-    cur = con.cursor()
-
+def create_snp_table(cursor):
     with open('data/database/snp_table.sql', 'r') as f:
         script = f.read()
 
-    cur.executescript(script)
-    con.commit()
-
-    con.close()
+    cursor.executescript(script)
 
 
-def create_stock_table():
-    con = sqlite3.connect('data/database/snp.db')
-    cur = con.cursor()
-
+def create_stock_table(cursor):
     with open('data/database/stock_table.sql', 'r') as f:
         script = f.read()
 
-    cur.executescript(script)
-    con.commit()
-
-    con.close()
+    cursor.executescript(script)
 
 
 def drop_table(table_names):
