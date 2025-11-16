@@ -1,6 +1,7 @@
 import urls
 
 import time
+from datetime import date, datetime, timedelta
 
 import requests
 import pandas as pd
@@ -94,7 +95,11 @@ def get_rows(driver, sym):
 
 
 # returns list of dictionaries
-def get_ytd(symbols, year_start='2024-12-31'):
+# default date_end param is last trading day of 2024. YES we want this to calculate move percent for all days after.
+def get_data(symbols, date_end='2024-12-31'):
+    date_format  = "%Y-%m-%d"
+    date_check = datetime.strptime(date_end, date_format)
+
     options = webdriver.ChromeOptions()
     options.page_load_strategy = 'eager'
     options.add_argument('--headless=new')
@@ -112,12 +117,14 @@ def get_ytd(symbols, year_start='2024-12-31'):
         if len(rows) > 0:
             for row in rows:
                 parsed = scrape_row(row, sym)
-                
-                if len(parsed) > 0:
-                    d.append(parsed)
 
-                    if parsed['date'] == year_start:
+                if len(parsed) > 0:
+                    date_parsed = datetime.strptime(parsed['date'], date_format)
+                    if date_parsed == date_check - timedelta(days=1): # if scraped date is 1 day past what we want, exit scrape
                         break
+
+                    d.append(parsed)
+            
         else:
             print(f'[ERROR1] {sym}: elements found but returned 0 rows... Trying one more time.')
 
@@ -128,10 +135,11 @@ def get_ytd(symbols, year_start='2024-12-31'):
                     parsed = scrape_row(row, sym)
                     
                     if len(parsed) > 0:
-                        d.append(parsed)
-
-                        if parsed['date'] == year_start:
+                        date_parsed = datetime.strptime(parsed['date'], date_format)
+                        if date_parsed == date_check - timedelta(days=1): # if scraped date is 1 day past what we want, exit scrape
                             break
+
+                        d.append(parsed)
             else:
                 print(f'[ERROR2] {sym}: elements found but returned 0 rows... skipping stock.')
             
@@ -148,6 +156,7 @@ def get_ytd(symbols, year_start='2024-12-31'):
     return d
 
 
+# scrape S&P's basic data
 def get_daily_data(driver):
     url = "https://finance.yahoo.com/quote/%5EGSPC/"
     driver.get(url)
