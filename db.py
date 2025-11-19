@@ -63,7 +63,7 @@ def insert_new_snp(new_snp):
     for i, row in new_snp.iterrows():
         data.append(tuple(row))
 
-    cur.executemany('INSERT INTO snp (exchange_url, symbol, security, sector, sub_industry, hq_location, date_added, CIK, founded) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', data)
+    cur.executemany('INSERT INTO snp (exchangeUrl, symbol, security, sector, subIndustry, hqLocation, dateAdded, CIK, founded) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', data)
     con.commit()
     print('snp table updated.')
 

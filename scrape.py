@@ -21,7 +21,7 @@ months = {'Jan':'01', 'Feb':'02', 'Mar':'03', 'Apr':'04', 'May':'05', 'Jun':'06'
 
 
 def get_list():
-    data = {'exchange_url': [], 'symbol': [], 'security': [], 'sector': [], 'sub_industry': [], 'hq_location': [], 'date_added': [], 'CIK': [], 'founded': []}
+    data = {'exchangeUrl': [], 'symbol': [], 'security': [], 'sector': [], 'subIndustry': [], 'hqLocation': [], 'dateAdded': [], 'CIK': [], 'founded': []}
     
     req = requests.get(urls.snp_list_url, headers=headers)
 
@@ -32,13 +32,13 @@ def get_list():
         for stock in snp:
             tds = stock.find_all('td')
             
-            data['exchange_url'].append(tds[0].find('a')['href'].strip())
+            data['exchangeUrl'].append(tds[0].find('a')['href'].strip())
             data['symbol'].append(tds[0].text.strip())
             data['security'].append(tds[1].text.strip())
             data['sector'].append(tds[2].text.strip())
-            data['sub_industry'].append(tds[3].text.strip())
-            data['hq_location'].append(tds[4].text.strip())
-            data['date_added'].append(tds[5].text.strip())
+            data['subIndustry'].append(tds[3].text.strip())
+            data['hqLocation'].append(tds[4].text.strip())
+            data['dateAdded'].append(tds[5].text.strip())
             data['CIK'].append(tds[6].text.strip())
             data['founded'].append(tds[7].text.strip())
 
@@ -183,5 +183,7 @@ def get_daily_data():
         return {"points": points, "change": change, "move": move }
     except NoSuchElementException:
         print("Could not find element for S&P500 daily data.")
+
+    driver.quit()
 
     return -1
