@@ -1,6 +1,9 @@
+__pycache__
+
 urls.py
 db_nb.ipynb
 nb.ipynb
+Secrets.py
 
 data/database/snp.db
 data/csv/

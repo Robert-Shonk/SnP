@@ -9,6 +9,7 @@ def init_db():
 
     create_snp_table(cur)
     create_stock_table(cur)
+    create_daily_table(cur)
 
     con.commit()
     con.close()
@@ -24,6 +25,13 @@ def create_snp_table(cursor):
 
 def create_stock_table(cursor):
     with open('data/database/stock_table.sql', 'r') as f:
+        script = f.read()
+
+    cursor.executescript(script)
+
+
+def create_daily_table(cursor):
+    with open('data/database/daily_table.sql', 'r') as f:
         script = f.read()
 
     cursor.executescript(script)
@@ -83,3 +91,16 @@ def insert_stocks(stocks):
 
     con.close()
     print('YTD stock data added.')
+
+
+def insert_daily(daily):
+    con = sqlite3.connect('data/database/snp.db')
+    cur = con.cursor()
+
+    data = (daily["points"], daily["change"], daily["move"], daily["date"])
+
+    cur.execute('INSERT INTO daily (points, change, move, date) VALUES (?, ?, ?, ?)', data)
+    con.commit()
+
+    con.close()
+    print('daily added.')

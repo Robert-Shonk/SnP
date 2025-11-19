@@ -49,7 +49,18 @@ def get_list():
     else:
         print(f'[scrape.get_list()] Error: code {req.status_code}')
         return -1
-    
+
+
+def set_driver(header=False):
+    options = webdriver.ChromeOptions()
+    options.page_load_strategy = 'eager'
+    options.add_argument('--headless=new')
+    if header:
+        options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0")
+    driver = webdriver.Chrome(options=options)
+
+    return driver
+
 
 def scrape_row(row, symbol):
     data = {}
@@ -98,10 +109,7 @@ def get_data(symbols, date_end='2024-12-31'):
     date_format  = "%Y-%m-%d"
     date_check = datetime.strptime(date_end, date_format)
 
-    options = webdriver.ChromeOptions()
-    options.page_load_strategy = 'eager'
-    options.add_argument('--headless=new')
-    driver = webdriver.Chrome(options=options)
+    driver = set_driver()
 
     d = []
     count = 1
@@ -157,22 +165,20 @@ def get_data(symbols, date_end='2024-12-31'):
 
 
 # scrape S&P's basic data
-def get_daily_data(driver):
+def get_daily_data():
     url = "https://finance.yahoo.com/quote/%5EGSPC/"
+    driver = set_driver(header=True)
     driver.get(url)
     
     try:
         points = driver.find_element(By.CSS_SELECTOR, "#main-content-wrapper > section.container.yf-19hyiou > div.bottom.yf-19hyiou > div.price.yf-19hyiou > section > div > section > div.container.yf-16vvaki > div:nth-child(1) > span")
         points = float(points.text.replace(",", ""))
-        print(points)
 
         change = driver.find_element(By.CSS_SELECTOR, "#main-content-wrapper > section.container.yf-19hyiou > div.bottom.yf-19hyiou > div.price.yf-19hyiou > section > div > section > div.container.yf-16vvaki > div:nth-child(2) > span")
         change = float(change.text)
-        print(change)
 
         move = driver.find_element(By.CSS_SELECTOR, "#main-content-wrapper > section.container.yf-19hyiou > div.bottom.yf-19hyiou > div.price.yf-19hyiou > section > div > section > div.container.yf-16vvaki > div:nth-child(3) > span")
         move = float(move.text.replace("(", "").replace(")", "").replace("%", ""))
-        print(move)
 
         return {"points": points, "change": change, "move": move }
     except NoSuchElementException:

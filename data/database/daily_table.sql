@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS daily;
+
+CREATE TABLE daily (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    points REAL NOT NULL,
+    change REAL NOT NULL,
+    move REAL NOT NULL,
+    date TEXT NOT NULL
+);

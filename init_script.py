@@ -3,7 +3,12 @@ import scrape
 import db
 import data_util
 
+from datetime import datetime
+
 import pandas as pd
+
+today = datetime.today()
+day_str = f"{today.year}-{today.month}-{today.day}"
 
 # init db (THIS WILL DROP ANY TABLES THAT EXIST)
 db.init_db()
@@ -23,6 +28,12 @@ ytd_with_moves = data_util.calc_moves(symbols, df)
 
 # insert year to date data into db
 db.insert_stocks(ytd_with_moves)
+
+# basic S&P data
+basic = scrape.get_daily_data()
+basic["date"] = day_str
+db.insert_daily(basic)
+
 
 # print 'finished'
 print("Scrape complete.")
