@@ -27,7 +27,7 @@ def calc_moves(symbols, stocks_df):
 # if no new stocks (new list is same as list in db) return -1
 def compare_snp(new_symbols):
     old_snp = pd.read_csv("data/csv/snp_list.csv")
-    old_symbols = old_snp["symbol"]
+    old_symbols = list(old_snp["symbol"])
 
     new_diff = [] # stocks that will need to have ytd scraped and added to stock table.
     old_diff = [] # stocks to be removed from db.
@@ -43,5 +43,4 @@ def compare_snp(new_symbols):
         if os not in new_symbols:
             old_diff.append(os)
 
-
-    return { "new_stocks": new_diff, "old_stocks": old_diff }
+    return { "new_stocks": new_diff, "old_stocks": old_diff } 
